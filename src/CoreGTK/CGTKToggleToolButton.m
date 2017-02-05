@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromStock:(NSString*) stockId
+-(id)initFromStock:(OFString*) stockId
 {
 	self = [super initWithGObject:(GObject *)gtk_toggle_tool_button_new_from_stock([stockId UTF8String])];
 

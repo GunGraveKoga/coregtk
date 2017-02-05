@@ -33,10 +33,10 @@
 
 @implementation CGTKDialog
 
--(void)addButtons:(NSDictionary *)buttonTextDict
+-(void)addButtons:(OFDictionary *)buttonTextDict
 {
 	CGTKTypeWrapper *wrapper;
-	for(NSString *text in buttonTextDict)
+	for(OFString *text in buttonTextDict)
 	{
 		wrapper = [buttonTextDict objectForKey:text];
 		
@@ -44,14 +44,14 @@
 	}
 }
 
--(id)initWithTitle:(NSString *)title andParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andButtonTextResponseDictionary:(NSDictionary *)buttonTextDict
+-(id)initWithTitle:(OFString *)title andParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andButtonTextResponseDictionary:(OFDictionary *)buttonTextDict
 {
 	self = [super initWithGObject:(GObject *)gtk_dialog_new_with_buttons([title UTF8String], [parent WINDOW], flags, NULL, NULL)];
 
 	if(self)
 	{
 		CGTKTypeWrapper *wrapper;
-		for(NSString *text in buttonTextDict)
+		for(OFString *text in buttonTextDict)
 		{
 			wrapper = [buttonTextDict objectForKey:text];
 			
@@ -84,7 +84,7 @@
 	gtk_dialog_add_action_widget(GTK_DIALOG([self GOBJECT]), [child WIDGET], responseId);
 }
 
--(CGTKWidget*)addButtonWithButtonText:(NSString*) buttonText andResponseId:(gint) responseId
+-(CGTKWidget*)addButtonWithButtonText:(OFString*) buttonText andResponseId:(gint) responseId
 {
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_dialog_add_button(GTK_DIALOG([self GOBJECT]), [buttonText UTF8String], responseId)];
 }

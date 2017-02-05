@@ -49,12 +49,12 @@
 -(GtkStatusbar*)STATUSBAR;
 
 /**
- * -(guint*)getContextId:(NSString*) contextDescription;
+ * -(guint*)getContextId:(OFString*) contextDescription;
  *
  * @param contextDescription
  * @returns guint
  */
--(guint)getContextId:(NSString*) contextDescription;
+-(guint)getContextId:(OFString*) contextDescription;
 
 /**
  * -(CGTKWidget**)getMessageArea;
@@ -71,13 +71,13 @@
 -(void)pop:(guint) contextId;
 
 /**
- * -(guint*)pushWithContextId:(guint) contextId andText:(NSString*) text;
+ * -(guint*)pushWithContextId:(guint) contextId andText:(OFString*) text;
  *
  * @param contextId
  * @param text
  * @returns guint
  */
--(guint)pushWithContextId:(guint) contextId andText:(NSString*) text;
+-(guint)pushWithContextId:(guint) contextId andText:(OFString*) text;
 
 /**
  * -(void*)removeWithContextId:(guint) contextId andMessageId:(guint) messageId;

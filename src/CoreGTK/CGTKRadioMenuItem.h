@@ -42,10 +42,10 @@
  */
 -(id)init:(GSList*) group;
 -(id)initFromWidget:(GtkRadioMenuItem*) group;
--(id)initWithLabelWithGroup:(GSList*) group andLabel:(NSString*) label;
--(id)initWithLabelFromWidgetWithGroup:(GtkRadioMenuItem*) group andLabel:(NSString*) label;
--(id)initWithMnemonicWithGroup:(GSList*) group andLabel:(NSString*) label;
--(id)initWithMnemonicFromWidgetWithGroup:(GtkRadioMenuItem*) group andLabel:(NSString*) label;
+-(id)initWithLabelWithGroup:(GSList*) group andLabel:(OFString*) label;
+-(id)initWithLabelFromWidgetWithGroup:(GtkRadioMenuItem*) group andLabel:(OFString*) label;
+-(id)initWithMnemonicWithGroup:(GSList*) group andLabel:(OFString*) label;
+-(id)initWithMnemonicFromWidgetWithGroup:(GtkRadioMenuItem*) group andLabel:(OFString*) label;
 
 /**
  * Methods

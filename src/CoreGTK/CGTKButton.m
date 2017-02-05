@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size
+-(id)initFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size
 {
 	self = [super initWithGObject:(GObject *)gtk_button_new_from_icon_name([iconName UTF8String], size)];
 
@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initFromStock:(NSString*) stockId
+-(id)initFromStock:(OFString*) stockId
 {
 	self = [super initWithGObject:(GObject *)gtk_button_new_from_stock([stockId UTF8String])];
 
@@ -69,7 +69,7 @@
 	return self;
 }
 
--(id)initWithLabel:(NSString*) label
+-(id)initWithLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_button_new_with_label([label UTF8String])];
 
@@ -81,7 +81,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) label
+-(id)initWithMnemonic:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_button_new_with_mnemonic([label UTF8String])];
 
@@ -138,9 +138,9 @@
 	return gtk_button_get_image_position(GTK_BUTTON([self GOBJECT]));
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_button_get_label(GTK_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_button_get_label(GTK_BUTTON([self GOBJECT]))];
 }
 
 -(GtkReliefStyle)getRelief
@@ -198,7 +198,7 @@
 	gtk_button_set_image_position(GTK_BUTTON([self GOBJECT]), position);
 }
 
--(void)setLabel:(NSString*) label
+-(void)setLabel:(OFString*) label
 {
 	gtk_button_set_label(GTK_BUTTON([self GOBJECT]), [label UTF8String]);
 }

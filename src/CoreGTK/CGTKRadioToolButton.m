@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromStockWithGroup:(GSList*) group andStockId:(NSString*) stockId
+-(id)initFromStockWithGroup:(GSList*) group andStockId:(OFString*) stockId
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_tool_button_new_from_stock(group, [stockId UTF8String])];
 
@@ -69,7 +69,7 @@
 	return self;
 }
 
--(id)initWithStockFromWidgetWithGroup:(GtkRadioToolButton*) group andStockId:(NSString*) stockId
+-(id)initWithStockFromWidgetWithGroup:(GtkRadioToolButton*) group andStockId:(OFString*) stockId
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_tool_button_new_with_stock_from_widget(group, [stockId UTF8String])];
 

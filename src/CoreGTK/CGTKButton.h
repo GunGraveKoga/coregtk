@@ -41,10 +41,10 @@
  * Constructors
  */
 -(id)init;
--(id)initFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size;
--(id)initFromStock:(NSString*) stockId;
--(id)initWithLabel:(NSString*) label;
--(id)initWithMnemonic:(NSString*) label;
+-(id)initFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size;
+-(id)initFromStock:(OFString*) stockId;
+-(id)initWithLabel:(OFString*) label;
+-(id)initWithMnemonic:(OFString*) label;
 
 /**
  * Methods
@@ -108,11 +108,11 @@
 -(GtkPositionType)getImagePosition;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(GtkReliefStyle*)getRelief;
@@ -190,11 +190,11 @@
 -(void)setImagePosition:(GtkPositionType) position;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setRelief:(GtkReliefStyle) relief;

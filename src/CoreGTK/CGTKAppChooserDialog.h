@@ -41,7 +41,7 @@
  * Constructors
  */
 -(id)initWithParent:(GtkWindow*) parent andFlags:(GtkDialogFlags) flags andFile:(GFile*) file;
--(id)initForContentTypeWithParent:(GtkWindow*) parent andFlags:(GtkDialogFlags) flags andContentType:(NSString*) contentType;
+-(id)initForContentTypeWithParent:(GtkWindow*) parent andFlags:(GtkDialogFlags) flags andContentType:(OFString*) contentType;
 
 /**
  * Methods
@@ -50,11 +50,11 @@
 -(GtkAppChooserDialog*)APPCHOOSERDIALOG;
 
 /**
- * -(NSString**)getHeading;
+ * -(OFString**)getHeading;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getHeading;
+-(OFString*)getHeading;
 
 /**
  * -(CGTKWidget**)getWidget;
@@ -64,10 +64,10 @@
 -(CGTKWidget*)getWidget;
 
 /**
- * -(void*)setHeading:(NSString*) heading;
+ * -(void*)setHeading:(OFString*) heading;
  *
  * @param heading
  */
--(void)setHeading:(NSString*) heading;
+-(void)setHeading:(OFString*) heading;
 
 @end

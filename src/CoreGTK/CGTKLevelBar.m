@@ -62,7 +62,7 @@
 	return GTK_LEVEL_BAR([self GOBJECT]);
 }
 
--(void)addOffsetValueWithName:(NSString*) name andValue:(gdouble) value
+-(void)addOffsetValueWithName:(OFString*) name andValue:(gdouble) value
 {
 	gtk_level_bar_add_offset_value(GTK_LEVEL_BAR([self GOBJECT]), [name UTF8String], value);
 }
@@ -87,7 +87,7 @@
 	return gtk_level_bar_get_mode(GTK_LEVEL_BAR([self GOBJECT]));
 }
 
--(BOOL)getOffsetValueWithName:(NSString*) name andValue:(gdouble*) value
+-(BOOL)getOffsetValueWithName:(OFString*) name andValue:(gdouble*) value
 {
 	return (gtk_level_bar_get_offset_value(GTK_LEVEL_BAR([self GOBJECT]), [name UTF8String], value) ? YES : NO);
 }
@@ -97,7 +97,7 @@
 	return gtk_level_bar_get_value(GTK_LEVEL_BAR([self GOBJECT]));
 }
 
--(void)removeOffsetValue:(NSString*) name
+-(void)removeOffsetValue:(OFString*) name
 {
 	gtk_level_bar_remove_offset_value(GTK_LEVEL_BAR([self GOBJECT]), [name UTF8String]);
 }

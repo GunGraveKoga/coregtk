@@ -41,8 +41,8 @@
  * Constructors
  */
 -(id)init;
--(id)initWithLabel:(NSString*) label;
--(id)initWithMnemonic:(NSString*) label;
+-(id)initWithLabel:(OFString*) label;
+-(id)initWithMnemonic:(OFString*) label;
 
 /**
  * Methods
@@ -63,18 +63,18 @@
 -(void)deselect;
 
 /**
- * -(NSString**)getAccelPath;
+ * -(OFString**)getAccelPath;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getAccelPath;
+-(OFString*)getAccelPath;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(BOOL*)getReserveIndicator;
@@ -111,18 +111,18 @@
 -(void)select;
 
 /**
- * -(void*)setAccelPath:(NSString*) accelPath;
+ * -(void*)setAccelPath:(OFString*) accelPath;
  *
  * @param accelPath
  */
--(void)setAccelPath:(NSString*) accelPath;
+-(void)setAccelPath:(OFString*) accelPath;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setReserveIndicator:(BOOL) reserve;

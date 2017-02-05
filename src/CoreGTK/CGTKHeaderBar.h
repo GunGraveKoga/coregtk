@@ -56,11 +56,11 @@
 -(CGTKWidget*)getCustomTitle;
 
 /**
- * -(NSString**)getDecorationLayout;
+ * -(OFString**)getDecorationLayout;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getDecorationLayout;
+-(OFString*)getDecorationLayout;
 
 /**
  * -(BOOL*)getHasSubtitle;
@@ -77,18 +77,18 @@
 -(BOOL)getShowCloseButton;
 
 /**
- * -(NSString**)getSubtitle;
+ * -(OFString**)getSubtitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getSubtitle;
+-(OFString*)getSubtitle;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(void*)packEnd:(CGTKWidget*) child;
@@ -112,11 +112,11 @@
 -(void)setCustomTitle:(CGTKWidget*) titleWidget;
 
 /**
- * -(void*)setDecorationLayout:(NSString*) layout;
+ * -(void*)setDecorationLayout:(OFString*) layout;
  *
  * @param layout
  */
--(void)setDecorationLayout:(NSString*) layout;
+-(void)setDecorationLayout:(OFString*) layout;
 
 /**
  * -(void*)setHasSubtitle:(BOOL) setting;
@@ -133,17 +133,17 @@
 -(void)setShowCloseButton:(BOOL) setting;
 
 /**
- * -(void*)setSubtitle:(NSString*) subtitle;
+ * -(void*)setSubtitle:(OFString*) subtitle;
  *
  * @param subtitle
  */
--(void)setSubtitle:(NSString*) subtitle;
+-(void)setSubtitle:(OFString*) subtitle;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 @end

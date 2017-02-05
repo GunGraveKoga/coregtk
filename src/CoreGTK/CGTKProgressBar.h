@@ -84,11 +84,11 @@
 -(BOOL)getShowText;
 
 /**
- * -(NSString**)getText;
+ * -(OFString**)getText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getText;
+-(OFString*)getText;
 
 /**
  * -(void*)pulse;
@@ -132,10 +132,10 @@
 -(void)setShowText:(BOOL) showText;
 
 /**
- * -(void*)setText:(NSString*) text;
+ * -(void*)setText:(OFString*) text;
  *
  * @param text
  */
--(void)setText:(NSString*) text;
+-(void)setText:(OFString*) text;
 
 @end

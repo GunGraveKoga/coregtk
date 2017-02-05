@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)initWithTitle:(NSString*) title andAction:(GtkFileChooserAction) action;
+-(id)initWithTitle:(OFString*) title andAction:(GtkFileChooserAction) action;
 -(id)initWithDialog:(CGTKWidget*) dialog;
 
 /**
@@ -57,11 +57,11 @@
 -(BOOL)getFocusOnClick;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(gint*)getWidthChars;
@@ -78,11 +78,11 @@
 -(void)setFocusOnClick:(BOOL) focusOnClick;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 /**
  * -(void*)setWidthChars:(gint) nchars;

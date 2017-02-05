@@ -50,17 +50,17 @@
 	return GTK_STACK([self GOBJECT]);
 }
 
--(void)addNamedWithChild:(CGTKWidget*) child andName:(NSString*) name
+-(void)addNamedWithChild:(CGTKWidget*) child andName:(OFString*) name
 {
 	gtk_stack_add_named(GTK_STACK([self GOBJECT]), [child WIDGET], [name UTF8String]);
 }
 
--(void)addTitledWithChild:(CGTKWidget*) child andName:(NSString*) name andTitle:(NSString*) title
+-(void)addTitledWithChild:(CGTKWidget*) child andName:(OFString*) name andTitle:(OFString*) title
 {
 	gtk_stack_add_titled(GTK_STACK([self GOBJECT]), [child WIDGET], [name UTF8String], [title UTF8String]);
 }
 
--(CGTKWidget*)getChildByName:(NSString*) name
+-(CGTKWidget*)getChildByName:(OFString*) name
 {
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_stack_get_child_by_name(GTK_STACK([self GOBJECT]), [name UTF8String])];
 }
@@ -105,9 +105,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_stack_get_visible_child(GTK_STACK([self GOBJECT]))];
 }
 
--(NSString*)getVisibleChildName
+-(OFString*)getVisibleChildName
 {
-	return [NSString stringWithUTF8String:gtk_stack_get_visible_child_name(GTK_STACK([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_stack_get_visible_child_name(GTK_STACK([self GOBJECT]))];
 }
 
 -(void)setHhomogeneous:(BOOL) hhomogeneous
@@ -145,12 +145,12 @@
 	gtk_stack_set_visible_child(GTK_STACK([self GOBJECT]), [child WIDGET]);
 }
 
--(void)setVisibleChildFullWithName:(NSString*) name andTransition:(GtkStackTransitionType) transition
+-(void)setVisibleChildFullWithName:(OFString*) name andTransition:(GtkStackTransitionType) transition
 {
 	gtk_stack_set_visible_child_full(GTK_STACK([self GOBJECT]), [name UTF8String], transition);
 }
 
--(void)setVisibleChildName:(NSString*) name
+-(void)setVisibleChildName:(OFString*) name
 {
 	gtk_stack_set_visible_child_name(GTK_STACK([self GOBJECT]), [name UTF8String]);
 }

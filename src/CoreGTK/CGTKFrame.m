@@ -33,7 +33,7 @@
 
 @implementation CGTKFrame
 
--(id)init:(NSString*) label
+-(id)init:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_frame_new([label UTF8String])];
 
@@ -50,9 +50,9 @@
 	return GTK_FRAME([self GOBJECT]);
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_frame_get_label(GTK_FRAME([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_frame_get_label(GTK_FRAME([self GOBJECT]))];
 }
 
 -(void)getLabelAlignWithXalign:(gfloat*) xalign andYalign:(gfloat*) yalign
@@ -70,7 +70,7 @@
 	return gtk_frame_get_shadow_type(GTK_FRAME([self GOBJECT]));
 }
 
--(void)setLabel:(NSString*) label
+-(void)setLabel:(OFString*) label
 {
 	gtk_frame_set_label(GTK_FRAME([self GOBJECT]), [label UTF8String]);
 }

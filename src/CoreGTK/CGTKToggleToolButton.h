@@ -41,7 +41,7 @@
  * Constructors
  */
 -(id)init;
--(id)initFromStock:(NSString*) stockId;
+-(id)initFromStock:(OFString*) stockId;
 
 /**
  * Methods

@@ -43,13 +43,13 @@
 
 -(GtkMessageDialog*)MESSAGEDIALOG;
 
--(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMarkup:(NSString *)markup;
+-(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMarkup:(OFString *)markup;
 
--(void)formatSecondaryText:(NSString *)message;
+-(void)formatSecondaryText:(OFString *)message;
 
--(void)formatSecondaryMarkup:(NSString *)markup;
+-(void)formatSecondaryMarkup:(OFString *)markup;
 
--(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMessage:(NSString *)message;
+-(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMessage:(OFString *)message;
 
 /**
  * -(CGTKWidget**)getImage;
@@ -73,10 +73,10 @@
 -(void)setImage:(CGTKWidget*) image;
 
 /**
- * -(void*)setMarkup:(NSString*) str;
+ * -(void*)setMarkup:(OFString*) str;
  *
  * @param str
  */
--(void)setMarkup:(NSString*) str;
+-(void)setMarkup:(OFString*) str;
 
 @end

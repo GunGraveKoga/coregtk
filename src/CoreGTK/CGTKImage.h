@@ -42,13 +42,13 @@
  */
 -(id)init;
 -(id)initFromAnimation:(GdkPixbufAnimation*) animation;
--(id)initFromFile:(NSString*) filename;
+-(id)initFromFile:(OFString*) filename;
 -(id)initFromGiconWithIcon:(GIcon*) icon andSize:(GtkIconSize) size;
--(id)initFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size;
+-(id)initFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size;
 -(id)initFromIconSetWithIconSet:(GtkIconSet*) iconSet andSize:(GtkIconSize) size;
 -(id)initFromPixbuf:(GdkPixbuf*) pixbuf;
--(id)initFromResource:(NSString*) resourcePath;
--(id)initFromStockWithStockId:(NSString*) stockId andSize:(GtkIconSize) size;
+-(id)initFromResource:(OFString*) resourcePath;
+-(id)initFromStockWithStockId:(OFString*) stockId andSize:(GtkIconSize) size;
 -(id)initFromSurface:(cairo_surface_t*) surface;
 
 /**
@@ -131,11 +131,11 @@
 -(void)setFromAnimation:(GdkPixbufAnimation*) animation;
 
 /**
- * -(void*)setFromFile:(NSString*) filename;
+ * -(void*)setFromFile:(OFString*) filename;
  *
  * @param filename
  */
--(void)setFromFile:(NSString*) filename;
+-(void)setFromFile:(OFString*) filename;
 
 /**
  * -(void*)setFromGiconWithIcon:(GIcon*) icon andSize:(GtkIconSize) size;
@@ -146,12 +146,12 @@
 -(void)setFromGiconWithIcon:(GIcon*) icon andSize:(GtkIconSize) size;
 
 /**
- * -(void*)setFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size;
+ * -(void*)setFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size;
  *
  * @param iconName
  * @param size
  */
--(void)setFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size;
+-(void)setFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size;
 
 /**
  * -(void*)setFromIconSetWithIconSet:(GtkIconSet*) iconSet andSize:(GtkIconSize) size;
@@ -169,19 +169,19 @@
 -(void)setFromPixbuf:(GdkPixbuf*) pixbuf;
 
 /**
- * -(void*)setFromResource:(NSString*) resourcePath;
+ * -(void*)setFromResource:(OFString*) resourcePath;
  *
  * @param resourcePath
  */
--(void)setFromResource:(NSString*) resourcePath;
+-(void)setFromResource:(OFString*) resourcePath;
 
 /**
- * -(void*)setFromStockWithStockId:(NSString*) stockId andSize:(GtkIconSize) size;
+ * -(void*)setFromStockWithStockId:(OFString*) stockId andSize:(GtkIconSize) size;
  *
  * @param stockId
  * @param size
  */
--(void)setFromStockWithStockId:(NSString*) stockId andSize:(GtkIconSize) size;
+-(void)setFromStockWithStockId:(OFString*) stockId andSize:(GtkIconSize) size;
 
 /**
  * -(void*)setFromSurface:(cairo_surface_t*) surface;

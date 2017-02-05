@@ -49,10 +49,10 @@
 -(GtkPopoverMenu*)POPOVERMENU;
 
 /**
- * -(void*)openSubmenu:(NSString*) name;
+ * -(void*)openSubmenu:(OFString*) name;
  *
  * @param name
  */
--(void)openSubmenu:(NSString*) name;
+-(void)openSubmenu:(OFString*) name;
 
 @end

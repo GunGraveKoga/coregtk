@@ -115,9 +115,9 @@
 	return gtk_combo_box_get_active(GTK_COMBO_BOX([self GOBJECT]));
 }
 
--(NSString*)getActiveId
+-(OFString*)getActiveId
 {
-	return [NSString stringWithUTF8String:gtk_combo_box_get_active_id(GTK_COMBO_BOX([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_combo_box_get_active_id(GTK_COMBO_BOX([self GOBJECT]))];
 }
 
 -(BOOL)getActiveIter:(GtkTreeIter*) iter
@@ -185,9 +185,9 @@
 	return gtk_combo_box_get_row_span_column(GTK_COMBO_BOX([self GOBJECT]));
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_combo_box_get_title(GTK_COMBO_BOX([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_combo_box_get_title(GTK_COMBO_BOX([self GOBJECT]))];
 }
 
 -(gint)getWrapWidth
@@ -215,7 +215,7 @@
 	gtk_combo_box_set_active(GTK_COMBO_BOX([self GOBJECT]), index);
 }
 
--(BOOL)setActiveId:(NSString*) activeId
+-(BOOL)setActiveId:(OFString*) activeId
 {
 	return (gtk_combo_box_set_active_id(GTK_COMBO_BOX([self GOBJECT]), [activeId UTF8String]) ? YES : NO);
 }
@@ -275,7 +275,7 @@
 	gtk_combo_box_set_row_span_column(GTK_COMBO_BOX([self GOBJECT]), rowSpan);
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_combo_box_set_title(GTK_COMBO_BOX([self GOBJECT]), [title UTF8String]);
 }

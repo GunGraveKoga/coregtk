@@ -337,7 +337,7 @@
 	return gtk_tree_view_insert_column(GTK_TREE_VIEW([self GOBJECT]), column, position);
 }
 
--(gint)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(NSString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify
+-(gint)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(OFString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify
 {
 	return gtk_tree_view_insert_column_with_data_func(GTK_TREE_VIEW([self GOBJECT]), position, [title UTF8String], cell, func, data, dnotify);
 }

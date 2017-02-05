@@ -33,7 +33,7 @@
 
 @implementation CGTKFontChooserDialog
 
--(id)initWithTitle:(NSString*) title andParent:(GtkWindow*) parent
+-(id)initWithTitle:(OFString*) title andParent:(GtkWindow*) parent
 {
 	self = [super initWithGObject:(GObject *)gtk_font_chooser_dialog_new([title UTF8String], parent)];
 

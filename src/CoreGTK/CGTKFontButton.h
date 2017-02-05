@@ -41,7 +41,7 @@
  * Constructors
  */
 -(id)init;
--(id)initWithFont:(NSString*) fontname;
+-(id)initWithFont:(OFString*) fontname;
 
 /**
  * Methods
@@ -50,11 +50,11 @@
 -(GtkFontButton*)FONTBUTTON;
 
 /**
- * -(NSString**)getFontName;
+ * -(OFString**)getFontName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getFontName;
+-(OFString*)getFontName;
 
 /**
  * -(BOOL*)getShowSize;
@@ -71,11 +71,11 @@
 -(BOOL)getShowStyle;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(BOOL*)getUseFont;
@@ -92,12 +92,12 @@
 -(BOOL)getUseSize;
 
 /**
- * -(BOOL*)setFontName:(NSString*) fontname;
+ * -(BOOL*)setFontName:(OFString*) fontname;
  *
  * @param fontname
  * @returns BOOL
  */
--(BOOL)setFontName:(NSString*) fontname;
+-(BOOL)setFontName:(OFString*) fontname;
 
 /**
  * -(void*)setShowSize:(BOOL) showSize;
@@ -114,11 +114,11 @@
 -(void)setShowStyle:(BOOL) showStyle;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 /**
  * -(void*)setUseFont:(BOOL) useFont;

@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromFile:(NSString*) filename
+-(id)initFromFile:(OFString*) filename
 {
 	self = [super initWithGObject:(GObject *)gtk_builder_new_from_file([filename UTF8String])];
 
@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initFromResource:(NSString*) resourcePath
+-(id)initFromResource:(OFString*) resourcePath
 {
 	self = [super initWithGObject:(GObject *)gtk_builder_new_from_resource([resourcePath UTF8String])];
 
@@ -69,7 +69,7 @@
 	return self;
 }
 
--(id)initFromStringWithString:(NSString*) string andLength:(gssize) length
+-(id)initFromStringWithString:(OFString*) string andLength:(gssize) length
 {
 	self = [super initWithGObject:(GObject *)gtk_builder_new_from_string([string UTF8String], length)];
 
@@ -86,37 +86,37 @@
 	return GTK_BUILDER([self GOBJECT]);
 }
 
--(void)addCallbackSymbolWithCallbackName:(NSString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol
+-(void)addCallbackSymbolWithCallbackName:(OFString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol
 {
 	gtk_builder_add_callback_symbol(GTK_BUILDER([self GOBJECT]), [callbackName UTF8String], callbackSymbol);
 }
 
--(guint)addFromFileWithFilename:(NSString*) filename andErr:(GError**) err
+-(guint)addFromFileWithFilename:(OFString*) filename andErr:(GError**) err
 {
 	return gtk_builder_add_from_file(GTK_BUILDER([self GOBJECT]), [filename UTF8String], err);
 }
 
--(guint)addFromResourceWithResourcePath:(NSString*) resourcePath andErr:(GError**) err
+-(guint)addFromResourceWithResourcePath:(OFString*) resourcePath andErr:(GError**) err
 {
 	return gtk_builder_add_from_resource(GTK_BUILDER([self GOBJECT]), [resourcePath UTF8String], err);
 }
 
--(guint)addFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andErr:(GError**) err
+-(guint)addFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andErr:(GError**) err
 {
 	return gtk_builder_add_from_string(GTK_BUILDER([self GOBJECT]), [buffer UTF8String], length, err);
 }
 
--(guint)addObjectsFromFileWithFilename:(NSString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err
+-(guint)addObjectsFromFileWithFilename:(OFString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err
 {
 	return gtk_builder_add_objects_from_file(GTK_BUILDER([self GOBJECT]), [filename UTF8String], objectIds, err);
 }
 
--(guint)addObjectsFromResourceWithResourcePath:(NSString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err
+-(guint)addObjectsFromResourceWithResourcePath:(OFString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err
 {
 	return gtk_builder_add_objects_from_resource(GTK_BUILDER([self GOBJECT]), [resourcePath UTF8String], objectIds, err);
 }
 
--(guint)addObjectsFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err
+-(guint)addObjectsFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err
 {
 	return gtk_builder_add_objects_from_string(GTK_BUILDER([self GOBJECT]), [buffer UTF8String], length, objectIds, err);
 }
@@ -131,7 +131,7 @@
 	gtk_builder_connect_signals_full(GTK_BUILDER([self GOBJECT]), func, userData);
 }
 
--(void)exposeObjectWithName:(NSString*) name andObject:(GObject*) object
+-(void)exposeObjectWithName:(OFString*) name andObject:(GObject*) object
 {
 	gtk_builder_expose_object(GTK_BUILDER([self GOBJECT]), [name UTF8String], object);
 }
@@ -141,7 +141,7 @@
 	return gtk_builder_get_application(GTK_BUILDER([self GOBJECT]));
 }
 
--(GObject*)getObject:(NSString*) name
+-(GObject*)getObject:(OFString*) name
 {
 	return gtk_builder_get_object(GTK_BUILDER([self GOBJECT]), [name UTF8String]);
 }
@@ -151,9 +151,9 @@
 	return gtk_builder_get_objects(GTK_BUILDER([self GOBJECT]));
 }
 
--(NSString*)getTranslationDomain
+-(OFString*)getTranslationDomain
 {
-	return [NSString stringWithUTF8String:gtk_builder_get_translation_domain(GTK_BUILDER([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_builder_get_translation_domain(GTK_BUILDER([self GOBJECT]))];
 }
 
 -(GType)getTypeFromName:(const char*) typeName
@@ -161,7 +161,7 @@
 	return gtk_builder_get_type_from_name(GTK_BUILDER([self GOBJECT]), typeName);
 }
 
--(GCallback)lookupCallbackSymbol:(NSString*) callbackName
+-(GCallback)lookupCallbackSymbol:(OFString*) callbackName
 {
 	return gtk_builder_lookup_callback_symbol(GTK_BUILDER([self GOBJECT]), [callbackName UTF8String]);
 }
@@ -171,17 +171,17 @@
 	gtk_builder_set_application(GTK_BUILDER([self GOBJECT]), application);
 }
 
--(void)setTranslationDomain:(NSString*) domain
+-(void)setTranslationDomain:(OFString*) domain
 {
 	gtk_builder_set_translation_domain(GTK_BUILDER([self GOBJECT]), [domain UTF8String]);
 }
 
--(BOOL)valueFromStringWithPspec:(GParamSpec*) pspec andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err
+-(BOOL)valueFromStringWithPspec:(GParamSpec*) pspec andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err
 {
 	return (gtk_builder_value_from_string(GTK_BUILDER([self GOBJECT]), pspec, [string UTF8String], value, err) ? YES : NO);
 }
 
--(BOOL)valueFromStringTypeWithType:(GType) type andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err
+-(BOOL)valueFromStringTypeWithType:(GType) type andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err
 {
 	return (gtk_builder_value_from_string_type(GTK_BUILDER([self GOBJECT]), type, [string UTF8String], value, err) ? YES : NO);
 }

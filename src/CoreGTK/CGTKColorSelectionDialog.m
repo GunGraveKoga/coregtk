@@ -33,7 +33,7 @@
 
 @implementation CGTKColorSelectionDialog
 
--(id)init:(NSString*) title
+-(id)init:(OFString*) title
 {
 	self = [super initWithGObject:(GObject *)gtk_color_selection_dialog_new([title UTF8String])];
 

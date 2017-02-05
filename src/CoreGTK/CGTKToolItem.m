@@ -80,7 +80,7 @@
 	return gtk_tool_item_get_orientation(GTK_TOOL_ITEM([self GOBJECT]));
 }
 
--(CGTKWidget*)getProxyMenuItem:(NSString*) menuItemId
+-(CGTKWidget*)getProxyMenuItem:(OFString*) menuItemId
 {
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_tool_item_get_proxy_menu_item(GTK_TOOL_ITEM([self GOBJECT]), [menuItemId UTF8String])];
 }
@@ -150,17 +150,17 @@
 	gtk_tool_item_set_is_important(GTK_TOOL_ITEM([self GOBJECT]), (isImportant ? TRUE : FALSE));
 }
 
--(void)setProxyMenuItemWithMenuItemId:(NSString*) menuItemId andMenuItem:(CGTKWidget*) menuItem
+-(void)setProxyMenuItemWithMenuItemId:(OFString*) menuItemId andMenuItem:(CGTKWidget*) menuItem
 {
 	gtk_tool_item_set_proxy_menu_item(GTK_TOOL_ITEM([self GOBJECT]), [menuItemId UTF8String], [menuItem WIDGET]);
 }
 
--(void)setTooltipMarkup:(NSString*) markup
+-(void)setTooltipMarkup:(OFString*) markup
 {
 	gtk_tool_item_set_tooltip_markup(GTK_TOOL_ITEM([self GOBJECT]), [markup UTF8String]);
 }
 
--(void)setTooltipText:(NSString*) text
+-(void)setTooltipText:(OFString*) text
 {
 	gtk_tool_item_set_tooltip_text(GTK_TOOL_ITEM([self GOBJECT]), [text UTF8String]);
 }

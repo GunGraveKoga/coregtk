@@ -50,7 +50,7 @@
 	return GTK_STATUSBAR([self GOBJECT]);
 }
 
--(guint)getContextId:(NSString*) contextDescription
+-(guint)getContextId:(OFString*) contextDescription
 {
 	return gtk_statusbar_get_context_id(GTK_STATUSBAR([self GOBJECT]), [contextDescription UTF8String]);
 }
@@ -65,7 +65,7 @@
 	gtk_statusbar_pop(GTK_STATUSBAR([self GOBJECT]), contextId);
 }
 
--(guint)pushWithContextId:(guint) contextId andText:(NSString*) text
+-(guint)pushWithContextId:(guint) contextId andText:(OFString*) text
 {
 	return gtk_statusbar_push(GTK_STATUSBAR([self GOBJECT]), contextId, [text UTF8String]);
 }

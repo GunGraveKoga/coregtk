@@ -70,9 +70,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_font_selection_get_family_list(GTK_FONT_SELECTION([self GOBJECT]))];
 }
 
--(NSString*)getFontName
+-(OFString*)getFontName
 {
-	return [NSString stringWithUTF8String:gtk_font_selection_get_font_name(GTK_FONT_SELECTION([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_selection_get_font_name(GTK_FONT_SELECTION([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getPreviewEntry
@@ -80,9 +80,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_font_selection_get_preview_entry(GTK_FONT_SELECTION([self GOBJECT]))];
 }
 
--(NSString*)getPreviewText
+-(OFString*)getPreviewText
 {
-	return [NSString stringWithUTF8String:gtk_font_selection_get_preview_text(GTK_FONT_SELECTION([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_selection_get_preview_text(GTK_FONT_SELECTION([self GOBJECT]))];
 }
 
 -(gint)getSize
@@ -100,12 +100,12 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_font_selection_get_size_list(GTK_FONT_SELECTION([self GOBJECT]))];
 }
 
--(BOOL)setFontName:(NSString*) fontname
+-(BOOL)setFontName:(OFString*) fontname
 {
 	return (gtk_font_selection_set_font_name(GTK_FONT_SELECTION([self GOBJECT]), [fontname UTF8String]) ? YES : NO);
 }
 
--(void)setPreviewText:(NSString*) text
+-(void)setPreviewText:(OFString*) text
 {
 	gtk_font_selection_set_preview_text(GTK_FONT_SELECTION([self GOBJECT]), [text UTF8String]);
 }

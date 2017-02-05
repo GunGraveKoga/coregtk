@@ -33,7 +33,7 @@
 
 @implementation CGTKAccelLabel
 
--(id)init:(NSString*) string
+-(id)init:(OFString*) string
 {
 	self = [super initWithGObject:(GObject *)gtk_accel_label_new([string UTF8String])];
 

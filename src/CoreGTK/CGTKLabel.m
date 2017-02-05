@@ -33,7 +33,7 @@
 
 @implementation CGTKLabel
 
--(id)init:(NSString*) str
+-(id)init:(OFString*) str
 {
 	self = [super initWithGObject:(GObject *)gtk_label_new([str UTF8String])];
 
@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) str
+-(id)initWithMnemonic:(OFString*) str
 {
 	self = [super initWithGObject:(GObject *)gtk_label_new_with_mnemonic([str UTF8String])];
 
@@ -72,9 +72,9 @@
 	return gtk_label_get_attributes(GTK_LABEL([self GOBJECT]));
 }
 
--(NSString*)getCurrentUri
+-(OFString*)getCurrentUri
 {
-	return [NSString stringWithUTF8String:gtk_label_get_current_uri(GTK_LABEL([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_label_get_current_uri(GTK_LABEL([self GOBJECT]))];
 }
 
 -(PangoEllipsizeMode)getEllipsize
@@ -87,9 +87,9 @@
 	return gtk_label_get_justify(GTK_LABEL([self GOBJECT]));
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_label_get_label(GTK_LABEL([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_label_get_label(GTK_LABEL([self GOBJECT]))];
 }
 
 -(PangoLayout*)getLayout
@@ -147,9 +147,9 @@
 	return (gtk_label_get_single_line_mode(GTK_LABEL([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getText
+-(OFString*)getText
 {
-	return [NSString stringWithUTF8String:gtk_label_get_text(GTK_LABEL([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_label_get_text(GTK_LABEL([self GOBJECT]))];
 }
 
 -(BOOL)getTrackVisitedLinks
@@ -207,7 +207,7 @@
 	gtk_label_set_justify(GTK_LABEL([self GOBJECT]), jtype);
 }
 
--(void)setLabel:(NSString*) str
+-(void)setLabel:(OFString*) str
 {
 	gtk_label_set_label(GTK_LABEL([self GOBJECT]), [str UTF8String]);
 }
@@ -227,12 +227,12 @@
 	gtk_label_set_lines(GTK_LABEL([self GOBJECT]), lines);
 }
 
--(void)setMarkup:(NSString*) str
+-(void)setMarkup:(OFString*) str
 {
 	gtk_label_set_markup(GTK_LABEL([self GOBJECT]), [str UTF8String]);
 }
 
--(void)setMarkupWithMnemonic:(NSString*) str
+-(void)setMarkupWithMnemonic:(OFString*) str
 {
 	gtk_label_set_markup_with_mnemonic(GTK_LABEL([self GOBJECT]), [str UTF8String]);
 }
@@ -247,7 +247,7 @@
 	gtk_label_set_mnemonic_widget(GTK_LABEL([self GOBJECT]), [widget WIDGET]);
 }
 
--(void)setPattern:(NSString*) pattern
+-(void)setPattern:(OFString*) pattern
 {
 	gtk_label_set_pattern(GTK_LABEL([self GOBJECT]), [pattern UTF8String]);
 }
@@ -262,12 +262,12 @@
 	gtk_label_set_single_line_mode(GTK_LABEL([self GOBJECT]), (singleLineMode ? TRUE : FALSE));
 }
 
--(void)setText:(NSString*) str
+-(void)setText:(OFString*) str
 {
 	gtk_label_set_text(GTK_LABEL([self GOBJECT]), [str UTF8String]);
 }
 
--(void)setTextWithMnemonic:(NSString*) str
+-(void)setTextWithMnemonic:(OFString*) str
 {
 	gtk_label_set_text_with_mnemonic(GTK_LABEL([self GOBJECT]), [str UTF8String]);
 }

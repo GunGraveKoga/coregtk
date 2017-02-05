@@ -40,13 +40,13 @@
  * Functions
  */
 +(GList*)getDefaultIconList;
-+(NSString*)getDefaultIconName;
++(OFString*)getDefaultIconName;
 +(GList*)listToplevels;
 +(void)setAutoStartupNotification:(BOOL) setting;
 +(void)setDefaultIcon:(GdkPixbuf*) icon;
-+(BOOL)setDefaultIconFromFileWithFilename:(NSString*) filename andErr:(GError**) err;
++(BOOL)setDefaultIconFromFileWithFilename:(OFString*) filename andErr:(GError**) err;
 +(void)setDefaultIconList:(GList*) list;
-+(void)setDefaultIconName:(NSString*) name;
++(void)setDefaultIconName:(OFString*) name;
 +(void)setInteractiveDebugging:(BOOL) enable;
 
 /**
@@ -265,11 +265,11 @@
 -(GList*)getIconList;
 
 /**
- * -(NSString**)getIconName;
+ * -(OFString**)getIconName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconName;
+-(OFString*)getIconName;
 
 /**
  * -(GdkModifierType*)getMnemonicModifier;
@@ -323,11 +323,11 @@
 -(BOOL)getResizeGripArea:(GdkRectangle*) rect;
 
 /**
- * -(NSString**)getRole;
+ * -(OFString**)getRole;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getRole;
+-(OFString*)getRole;
 
 /**
  * -(GdkScreen**)getScreen;
@@ -359,11 +359,11 @@
 -(BOOL)getSkipTaskbarHint;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(CGTKWidget**)getTitlebar;
@@ -458,12 +458,12 @@
 -(void)moveWithX:(gint) x andY:(gint) y;
 
 /**
- * -(BOOL*)parseGeometry:(NSString*) geometry;
+ * -(BOOL*)parseGeometry:(OFString*) geometry;
  *
  * @param geometry
  * @returns BOOL
  */
--(BOOL)parseGeometry:(NSString*) geometry;
+-(BOOL)parseGeometry:(OFString*) geometry;
 
 /**
  * -(void*)present;
@@ -661,13 +661,13 @@
 -(void)setIcon:(GdkPixbuf*) icon;
 
 /**
- * -(BOOL*)setIconFromFileWithFilename:(NSString*) filename andErr:(GError**) err;
+ * -(BOOL*)setIconFromFileWithFilename:(OFString*) filename andErr:(GError**) err;
  *
  * @param filename
  * @param err
  * @returns BOOL
  */
--(BOOL)setIconFromFileWithFilename:(NSString*) filename andErr:(GError**) err;
+-(BOOL)setIconFromFileWithFilename:(OFString*) filename andErr:(GError**) err;
 
 /**
  * -(void*)setIconList:(GList*) list;
@@ -677,11 +677,11 @@
 -(void)setIconList:(GList*) list;
 
 /**
- * -(void*)setIconName:(NSString*) name;
+ * -(void*)setIconName:(OFString*) name;
  *
  * @param name
  */
--(void)setIconName:(NSString*) name;
+-(void)setIconName:(OFString*) name;
 
 /**
  * -(void*)setKeepAbove:(BOOL) setting;
@@ -740,11 +740,11 @@
 -(void)setResizable:(BOOL) resizable;
 
 /**
- * -(void*)setRole:(NSString*) role;
+ * -(void*)setRole:(OFString*) role;
  *
  * @param role
  */
--(void)setRole:(NSString*) role;
+-(void)setRole:(OFString*) role;
 
 /**
  * -(void*)setScreen:(GdkScreen*) screen;
@@ -768,18 +768,18 @@
 -(void)setSkipTaskbarHint:(BOOL) setting;
 
 /**
- * -(void*)setStartupId:(NSString*) startupId;
+ * -(void*)setStartupId:(OFString*) startupId;
  *
  * @param startupId
  */
--(void)setStartupId:(NSString*) startupId;
+-(void)setStartupId:(OFString*) startupId;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 /**
  * -(void*)setTitlebar:(CGTKWidget*) titlebar;
@@ -810,12 +810,12 @@
 -(void)setUrgencyHint:(BOOL) setting;
 
 /**
- * -(void*)setWmclassWithWmclassName:(NSString*) wmclassName andWmclassClass:(NSString*) wmclassClass;
+ * -(void*)setWmclassWithWmclassName:(OFString*) wmclassName andWmclassClass:(OFString*) wmclassClass;
  *
  * @param wmclassName
  * @param wmclassClass
  */
--(void)setWmclassWithWmclassName:(NSString*) wmclassName andWmclassClass:(NSString*) wmclassClass;
+-(void)setWmclassWithWmclassName:(OFString*) wmclassName andWmclassClass:(OFString*) wmclassClass;
 
 /**
  * -(void*)stick;

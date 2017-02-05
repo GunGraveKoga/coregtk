@@ -90,11 +90,11 @@
 -(gint)getCurrentPage;
 
 /**
- * -(NSString**)getGroupName;
+ * -(OFString**)getGroupName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getGroupName;
+-(OFString*)getGroupName;
 
 /**
  * -(CGTKWidget**)getMenuLabel:(CGTKWidget*) child;
@@ -105,12 +105,12 @@
 -(CGTKWidget*)getMenuLabel:(CGTKWidget*) child;
 
 /**
- * -(NSString**)getMenuLabelText:(CGTKWidget*) child;
+ * -(OFString**)getMenuLabelText:(CGTKWidget*) child;
  *
  * @param child
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getMenuLabelText:(CGTKWidget*) child;
+-(OFString*)getMenuLabelText:(CGTKWidget*) child;
 
 /**
  * -(gint*)getNpages;
@@ -172,12 +172,12 @@
 -(CGTKWidget*)getTabLabel:(CGTKWidget*) child;
 
 /**
- * -(NSString**)getTabLabelText:(CGTKWidget*) child;
+ * -(OFString**)getTabLabelText:(CGTKWidget*) child;
  *
  * @param child
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTabLabelText:(CGTKWidget*) child;
+-(OFString*)getTabLabelText:(CGTKWidget*) child;
 
 /**
  * -(GtkPositionType*)getTabPos;
@@ -304,11 +304,11 @@
 -(void)setCurrentPage:(gint) pageNum;
 
 /**
- * -(void*)setGroupName:(NSString*) groupName;
+ * -(void*)setGroupName:(OFString*) groupName;
  *
  * @param groupName
  */
--(void)setGroupName:(NSString*) groupName;
+-(void)setGroupName:(OFString*) groupName;
 
 /**
  * -(void*)setMenuLabelWithChild:(CGTKWidget*) child andMenuLabel:(CGTKWidget*) menuLabel;
@@ -319,12 +319,12 @@
 -(void)setMenuLabelWithChild:(CGTKWidget*) child andMenuLabel:(CGTKWidget*) menuLabel;
 
 /**
- * -(void*)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(NSString*) menuText;
+ * -(void*)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(OFString*) menuText;
  *
  * @param child
  * @param menuText
  */
--(void)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(NSString*) menuText;
+-(void)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(OFString*) menuText;
 
 /**
  * -(void*)setScrollable:(BOOL) scrollable;
@@ -364,12 +364,12 @@
 -(void)setTabLabelWithChild:(CGTKWidget*) child andTabLabel:(CGTKWidget*) tabLabel;
 
 /**
- * -(void*)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(NSString*) tabText;
+ * -(void*)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(OFString*) tabText;
  *
  * @param child
  * @param tabText
  */
--(void)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(NSString*) tabText;
+-(void)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(OFString*) tabText;
 
 /**
  * -(void*)setTabPos:(GtkPositionType) pos;

@@ -42,9 +42,9 @@
  */
 -(id)init;
 -(id)initWithContextWithArea:(GtkCellArea*) area andContext:(GtkCellAreaContext*) context;
--(id)initWithMarkup:(NSString*) markup;
+-(id)initWithMarkup:(OFString*) markup;
 -(id)initWithPixbuf:(GdkPixbuf*) pixbuf;
--(id)initWithText:(NSString*) text;
+-(id)initWithText:(OFString*) text;
 
 /**
  * Methods

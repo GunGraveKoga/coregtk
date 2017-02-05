@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithFont:(NSString*) fontname
+-(id)initWithFont:(OFString*) fontname
 {
 	self = [super initWithGObject:(GObject *)gtk_font_button_new_with_font([fontname UTF8String])];
 
@@ -62,9 +62,9 @@
 	return GTK_FONT_BUTTON([self GOBJECT]);
 }
 
--(NSString*)getFontName
+-(OFString*)getFontName
 {
-	return [NSString stringWithUTF8String:gtk_font_button_get_font_name(GTK_FONT_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_button_get_font_name(GTK_FONT_BUTTON([self GOBJECT]))];
 }
 
 -(BOOL)getShowSize
@@ -77,9 +77,9 @@
 	return (gtk_font_button_get_show_style(GTK_FONT_BUTTON([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_font_button_get_title(GTK_FONT_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_button_get_title(GTK_FONT_BUTTON([self GOBJECT]))];
 }
 
 -(BOOL)getUseFont
@@ -92,7 +92,7 @@
 	return (gtk_font_button_get_use_size(GTK_FONT_BUTTON([self GOBJECT])) ? YES : NO);
 }
 
--(BOOL)setFontName:(NSString*) fontname
+-(BOOL)setFontName:(OFString*) fontname
 {
 	return (gtk_font_button_set_font_name(GTK_FONT_BUTTON([self GOBJECT]), [fontname UTF8String]) ? YES : NO);
 }
@@ -107,7 +107,7 @@
 	gtk_font_button_set_show_style(GTK_FONT_BUTTON([self GOBJECT]), (showStyle ? TRUE : FALSE));
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_font_button_set_title(GTK_FONT_BUTTON([self GOBJECT]), [title UTF8String]);
 }

@@ -68,7 +68,7 @@
 	return (gtk_widget_activate(GTK_WIDGET([self GOBJECT])) ? YES : NO);
 }
 
--(void)addAcceleratorWithAccelSignal:(NSString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags
+-(void)addAcceleratorWithAccelSignal:(OFString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags
 {
 	gtk_widget_add_accelerator(GTK_WIDGET([self GOBJECT]), [accelSignal UTF8String], accelGroup, accelKey, accelMods, accelFlags);
 }
@@ -103,7 +103,7 @@
 	return (gtk_widget_child_focus(GTK_WIDGET([self GOBJECT]), direction) ? YES : NO);
 }
 
--(void)childNotify:(NSString*) childProperty
+-(void)childNotify:(OFString*) childProperty
 {
 	gtk_widget_child_notify(GTK_WIDGET([self GOBJECT]), [childProperty UTF8String]);
 }
@@ -123,7 +123,7 @@
 	return gtk_widget_create_pango_context(GTK_WIDGET([self GOBJECT]));
 }
 
--(PangoLayout*)createPangoLayout:(NSString*) text
+-(PangoLayout*)createPangoLayout:(OFString*) text
 {
 	return gtk_widget_create_pango_layout(GTK_WIDGET([self GOBJECT]), [text UTF8String]);
 }
@@ -253,7 +253,7 @@
 	gtk_drag_source_set_icon_gicon(GTK_WIDGET([self GOBJECT]), icon);
 }
 
--(void)gtkDragSourceSetIconName:(NSString*) iconName
+-(void)gtkDragSourceSetIconName:(OFString*) iconName
 {
 	gtk_drag_source_set_icon_name(GTK_WIDGET([self GOBJECT]), [iconName UTF8String]);
 }
@@ -263,7 +263,7 @@
 	gtk_drag_source_set_icon_pixbuf(GTK_WIDGET([self GOBJECT]), pixbuf);
 }
 
--(void)gtkDragSourceSetIconStock:(NSString*) stockId
+-(void)gtkDragSourceSetIconStock:(OFString*) stockId
 {
 	gtk_drag_source_set_icon_stock(GTK_WIDGET([self GOBJECT]), [stockId UTF8String]);
 }
@@ -313,7 +313,7 @@
 	return gtk_widget_get_accessible(GTK_WIDGET([self GOBJECT]));
 }
 
--(GActionGroup*)getActionGroup:(NSString*) prefix
+-(GActionGroup*)getActionGroup:(OFString*) prefix
 {
 	return gtk_widget_get_action_group(GTK_WIDGET([self GOBJECT]), [prefix UTF8String]);
 }
@@ -378,9 +378,9 @@
 	return gtk_widget_get_clipboard(GTK_WIDGET([self GOBJECT]), selection);
 }
 
--(NSString*)getCompositeName
+-(OFString*)getCompositeName
 {
-	return [NSString stringWithUTF8String:gtk_widget_get_composite_name(GTK_WIDGET([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_widget_get_composite_name(GTK_WIDGET([self GOBJECT]))];
 }
 
 -(BOOL)getDeviceEnabled:(GdkDevice*) device
@@ -498,9 +498,9 @@
 	return gtk_widget_get_modifier_style(GTK_WIDGET([self GOBJECT]));
 }
 
--(NSString*)getName
+-(OFString*)getName
 {
-	return [NSString stringWithUTF8String:gtk_widget_get_name(GTK_WIDGET([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_widget_get_name(GTK_WIDGET([self GOBJECT]))];
 }
 
 -(BOOL)getNoShowAll
@@ -643,19 +643,19 @@
 	return (gtk_widget_get_support_multidevice(GTK_WIDGET([self GOBJECT])) ? YES : NO);
 }
 
--(GObject*)getTemplateChildWithWidgetType:(GType) widgetType andName:(NSString*) name
+-(GObject*)getTemplateChildWithWidgetType:(GType) widgetType andName:(OFString*) name
 {
 	return gtk_widget_get_template_child(GTK_WIDGET([self GOBJECT]), widgetType, [name UTF8String]);
 }
 
--(NSString*)getTooltipMarkup
+-(OFString*)getTooltipMarkup
 {
-	return [NSString stringWithUTF8String:gtk_widget_get_tooltip_markup(GTK_WIDGET([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_widget_get_tooltip_markup(GTK_WIDGET([self GOBJECT]))];
 }
 
--(NSString*)getTooltipText
+-(OFString*)getTooltipText
 {
-	return [NSString stringWithUTF8String:gtk_widget_get_tooltip_text(GTK_WIDGET([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_widget_get_tooltip_text(GTK_WIDGET([self GOBJECT]))];
 }
 
 -(GtkWindow*)getTooltipWindow
@@ -778,7 +778,7 @@
 	gtk_widget_input_shape_combine_region(GTK_WIDGET([self GOBJECT]), region);
 }
 
--(void)insertActionGroupWithName:(NSString*) name andGroup:(GActionGroup*) group
+-(void)insertActionGroupWithName:(OFString*) name andGroup:(GActionGroup*) group
 {
 	gtk_widget_insert_action_group(GTK_WIDGET([self GOBJECT]), [name UTF8String], group);
 }
@@ -908,7 +908,7 @@
 	gtk_widget_override_font(GTK_WIDGET([self GOBJECT]), fontDesc);
 }
 
--(void)overrideSymbolicColorWithName:(NSString*) name andColor:(const GdkRGBA*) color
+-(void)overrideSymbolicColorWithName:(OFString*) name andColor:(const GdkRGBA*) color
 {
 	gtk_widget_override_symbolic_color(GTK_WIDGET([self GOBJECT]), [name UTF8String], color);
 }
@@ -978,12 +978,12 @@
 	gtk_widget_remove_tick_callback(GTK_WIDGET([self GOBJECT]), id);
 }
 
--(GdkPixbuf*)renderIconWithStockId:(NSString*) stockId andSize:(GtkIconSize) size andDetail:(NSString*) detail
+-(GdkPixbuf*)renderIconWithStockId:(OFString*) stockId andSize:(GtkIconSize) size andDetail:(OFString*) detail
 {
 	return gtk_widget_render_icon(GTK_WIDGET([self GOBJECT]), [stockId UTF8String], size, [detail UTF8String]);
 }
 
--(GdkPixbuf*)renderIconPixbufWithStockId:(NSString*) stockId andSize:(GtkIconSize) size
+-(GdkPixbuf*)renderIconPixbufWithStockId:(OFString*) stockId andSize:(GtkIconSize) size
 {
 	return gtk_widget_render_icon_pixbuf(GTK_WIDGET([self GOBJECT]), [stockId UTF8String], size);
 }
@@ -1013,7 +1013,7 @@
 	return (gtk_widget_send_focus_change(GTK_WIDGET([self GOBJECT]), event) ? YES : NO);
 }
 
--(void)setAccelPathWithAccelPath:(NSString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup
+-(void)setAccelPathWithAccelPath:(OFString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup
 {
 	gtk_widget_set_accel_path(GTK_WIDGET([self GOBJECT]), [accelPath UTF8String], accelGroup);
 }
@@ -1048,7 +1048,7 @@
 	gtk_widget_set_clip(GTK_WIDGET([self GOBJECT]), clip);
 }
 
--(void)setCompositeName:(NSString*) name
+-(void)setCompositeName:(OFString*) name
 {
 	gtk_widget_set_composite_name(GTK_WIDGET([self GOBJECT]), [name UTF8String]);
 }
@@ -1148,7 +1148,7 @@
 	gtk_widget_set_margin_top(GTK_WIDGET([self GOBJECT]), margin);
 }
 
--(void)setName:(NSString*) name
+-(void)setName:(OFString*) name
 {
 	gtk_widget_set_name(GTK_WIDGET([self GOBJECT]), [name UTF8String]);
 }
@@ -1218,12 +1218,12 @@
 	gtk_widget_set_support_multidevice(GTK_WIDGET([self GOBJECT]), (supportMultidevice ? TRUE : FALSE));
 }
 
--(void)setTooltipMarkup:(NSString*) markup
+-(void)setTooltipMarkup:(OFString*) markup
 {
 	gtk_widget_set_tooltip_markup(GTK_WIDGET([self GOBJECT]), [markup UTF8String]);
 }
 
--(void)setTooltipText:(NSString*) text
+-(void)setTooltipText:(OFString*) text
 {
 	gtk_widget_set_tooltip_text(GTK_WIDGET([self GOBJECT]), [text UTF8String]);
 }
@@ -1303,12 +1303,12 @@
 	gtk_widget_style_attach(GTK_WIDGET([self GOBJECT]));
 }
 
--(void)styleGetPropertyWithPropertyName:(NSString*) propertyName andValue:(GValue*) value
+-(void)styleGetPropertyWithPropertyName:(OFString*) propertyName andValue:(GValue*) value
 {
 	gtk_widget_style_get_property(GTK_WIDGET([self GOBJECT]), [propertyName UTF8String], value);
 }
 
--(void)styleGetValistWithFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs
+-(void)styleGetValistWithFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs
 {
 	gtk_widget_style_get_valist(GTK_WIDGET([self GOBJECT]), [firstPropertyName UTF8String], varArgs);
 }

@@ -89,9 +89,9 @@
 	gtk_color_button_get_rgba(GTK_COLOR_BUTTON([self GOBJECT]), rgba);
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_color_button_get_title(GTK_COLOR_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_color_button_get_title(GTK_COLOR_BUTTON([self GOBJECT]))];
 }
 
 -(BOOL)getUseAlpha
@@ -114,7 +114,7 @@
 	gtk_color_button_set_rgba(GTK_COLOR_BUTTON([self GOBJECT]), rgba);
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_color_button_set_title(GTK_COLOR_BUTTON([self GOBJECT]), [title UTF8String]);
 }

@@ -487,7 +487,7 @@
 -(gint)insertColumnWithColumn:(GtkTreeViewColumn*) column andPosition:(gint) position;
 
 /**
- * -(gint*)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(NSString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify;
+ * -(gint*)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(OFString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify;
  *
  * @param position
  * @param title
@@ -497,7 +497,7 @@
  * @param dnotify
  * @returns gint
  */
--(gint)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(NSString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify;
+-(gint)insertColumnWithDataFuncWithPosition:(gint) position andTitle:(OFString*) title andCell:(GtkCellRenderer*) cell andFunc:(GtkTreeCellDataFunc) func andData:(gpointer) data andDnotify:(GDestroyNotify) dnotify;
 
 /**
  * -(BOOL*)isBlankAtPosWithX:(gint) x andY:(gint) y andPath:(GtkTreePath**) path andColumn:(GtkTreeViewColumn**) column andCellX:(gint*) cellX andCellY:(gint*) cellY;

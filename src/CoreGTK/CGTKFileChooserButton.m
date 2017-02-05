@@ -33,7 +33,7 @@
 
 @implementation CGTKFileChooserButton
 
--(id)initWithTitle:(NSString*) title andAction:(GtkFileChooserAction) action
+-(id)initWithTitle:(OFString*) title andAction:(GtkFileChooserAction) action
 {
 	self = [super initWithGObject:(GObject *)gtk_file_chooser_button_new([title UTF8String], action)];
 
@@ -67,9 +67,9 @@
 	return (gtk_file_chooser_button_get_focus_on_click(GTK_FILE_CHOOSER_BUTTON([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_file_chooser_button_get_title(GTK_FILE_CHOOSER_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_file_chooser_button_get_title(GTK_FILE_CHOOSER_BUTTON([self GOBJECT]))];
 }
 
 -(gint)getWidthChars
@@ -82,7 +82,7 @@
 	gtk_file_chooser_button_set_focus_on_click(GTK_FILE_CHOOSER_BUTTON([self GOBJECT]), (focusOnClick ? TRUE : FALSE));
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_file_chooser_button_set_title(GTK_FILE_CHOOSER_BUTTON([self GOBJECT]), [title UTF8String]);
 }

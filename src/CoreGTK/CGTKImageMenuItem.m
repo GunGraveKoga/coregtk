@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromStockWithStockId:(NSString*) stockId andAccelGroup:(GtkAccelGroup*) accelGroup
+-(id)initFromStockWithStockId:(OFString*) stockId andAccelGroup:(GtkAccelGroup*) accelGroup
 {
 	self = [super initWithGObject:(GObject *)gtk_image_menu_item_new_from_stock([stockId UTF8String], accelGroup)];
 
@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initWithLabel:(NSString*) label
+-(id)initWithLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_image_menu_item_new_with_label([label UTF8String])];
 
@@ -69,7 +69,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) label
+-(id)initWithMnemonic:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_image_menu_item_new_with_mnemonic([label UTF8String])];
 

@@ -33,14 +33,14 @@
 
 @implementation CGTKColorSelection
 
-+(BOOL)paletteFromStringWithStr:(NSString*) str andColors:(GdkColor**) colors andNcolors:(gint*) ncolors
++(BOOL)paletteFromStringWithStr:(OFString*) str andColors:(GdkColor**) colors andNcolors:(gint*) ncolors
 {
 	return (gtk_color_selection_palette_from_string([str UTF8String], colors, ncolors) ? YES : NO);
 }
 
-+(NSString*)paletteToStringWithColors:(GdkColor*) colors andNcolors:(gint) ncolors
++(OFString*)paletteToStringWithColors:(GdkColor*) colors andNcolors:(gint) ncolors
 {
-	return [NSString stringWithUTF8String:gtk_color_selection_palette_to_string(colors, ncolors)];
+	return [OFString stringWithUTF8String:gtk_color_selection_palette_to_string(colors, ncolors)];
 }
 
 +(GtkColorSelectionChangePaletteWithScreenFunc)setChangePaletteWithScreenHook:(GtkColorSelectionChangePaletteWithScreenFunc) func

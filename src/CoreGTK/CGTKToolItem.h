@@ -91,12 +91,12 @@
 -(GtkOrientation)getOrientation;
 
 /**
- * -(CGTKWidget**)getProxyMenuItem:(NSString*) menuItemId;
+ * -(CGTKWidget**)getProxyMenuItem:(OFString*) menuItemId;
  *
  * @param menuItemId
  * @returns CGTKWidget*
  */
--(CGTKWidget*)getProxyMenuItem:(NSString*) menuItemId;
+-(CGTKWidget*)getProxyMenuItem:(OFString*) menuItemId;
 
 /**
  * -(GtkReliefStyle*)getReliefStyle;
@@ -189,26 +189,26 @@
 -(void)setIsImportant:(BOOL) isImportant;
 
 /**
- * -(void*)setProxyMenuItemWithMenuItemId:(NSString*) menuItemId andMenuItem:(CGTKWidget*) menuItem;
+ * -(void*)setProxyMenuItemWithMenuItemId:(OFString*) menuItemId andMenuItem:(CGTKWidget*) menuItem;
  *
  * @param menuItemId
  * @param menuItem
  */
--(void)setProxyMenuItemWithMenuItemId:(NSString*) menuItemId andMenuItem:(CGTKWidget*) menuItem;
+-(void)setProxyMenuItemWithMenuItemId:(OFString*) menuItemId andMenuItem:(CGTKWidget*) menuItem;
 
 /**
- * -(void*)setTooltipMarkup:(NSString*) markup;
+ * -(void*)setTooltipMarkup:(OFString*) markup;
  *
  * @param markup
  */
--(void)setTooltipMarkup:(NSString*) markup;
+-(void)setTooltipMarkup:(OFString*) markup;
 
 /**
- * -(void*)setTooltipText:(NSString*) text;
+ * -(void*)setTooltipText:(OFString*) text;
  *
  * @param text
  */
--(void)setTooltipText:(NSString*) text;
+-(void)setTooltipText:(OFString*) text;
 
 /**
  * -(void*)setUseDragWindow:(BOOL) useDragWindow;

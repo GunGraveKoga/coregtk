@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithLabel:(NSString*) label
+-(id)initWithLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_menu_item_new_with_label([label UTF8String])];
 
@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) label
+-(id)initWithMnemonic:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_menu_item_new_with_mnemonic([label UTF8String])];
 
@@ -84,14 +84,14 @@
 	gtk_menu_item_deselect(GTK_MENU_ITEM([self GOBJECT]));
 }
 
--(NSString*)getAccelPath
+-(OFString*)getAccelPath
 {
-	return [NSString stringWithUTF8String:gtk_menu_item_get_accel_path(GTK_MENU_ITEM([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_menu_item_get_accel_path(GTK_MENU_ITEM([self GOBJECT]))];
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_menu_item_get_label(GTK_MENU_ITEM([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_menu_item_get_label(GTK_MENU_ITEM([self GOBJECT]))];
 }
 
 -(BOOL)getReserveIndicator
@@ -119,12 +119,12 @@
 	gtk_menu_item_select(GTK_MENU_ITEM([self GOBJECT]));
 }
 
--(void)setAccelPath:(NSString*) accelPath
+-(void)setAccelPath:(OFString*) accelPath
 {
 	gtk_menu_item_set_accel_path(GTK_MENU_ITEM([self GOBJECT]), [accelPath UTF8String]);
 }
 
--(void)setLabel:(NSString*) label
+-(void)setLabel:(OFString*) label
 {
 	gtk_menu_item_set_label(GTK_MENU_ITEM([self GOBJECT]), [label UTF8String]);
 }

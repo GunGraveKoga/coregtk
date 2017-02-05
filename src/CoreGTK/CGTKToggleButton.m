@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithLabel:(NSString*) label
+-(id)initWithLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_toggle_button_new_with_label([label UTF8String])];
 
@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) label
+-(id)initWithMnemonic:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_toggle_button_new_with_mnemonic([label UTF8String])];
 

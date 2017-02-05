@@ -124,12 +124,12 @@
 -(GdkPixbuf*)getPageSideImage:(CGTKWidget*) page;
 
 /**
- * -(NSString**)getPageTitle:(CGTKWidget*) page;
+ * -(OFString**)getPageTitle:(CGTKWidget*) page;
  *
  * @param page
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getPageTitle:(CGTKWidget*) page;
+-(OFString*)getPageTitle:(CGTKWidget*) page;
 
 /**
  * -(GtkAssistantPageType*)getPageType:(CGTKWidget*) page;
@@ -231,12 +231,12 @@
 -(void)setPageSideImageWithPage:(CGTKWidget*) page andPixbuf:(GdkPixbuf*) pixbuf;
 
 /**
- * -(void*)setPageTitleWithPage:(CGTKWidget*) page andTitle:(NSString*) title;
+ * -(void*)setPageTitleWithPage:(CGTKWidget*) page andTitle:(OFString*) title;
  *
  * @param page
  * @param title
  */
--(void)setPageTitleWithPage:(CGTKWidget*) page andTitle:(NSString*) title;
+-(void)setPageTitleWithPage:(CGTKWidget*) page andTitle:(OFString*) title;
 
 /**
  * -(void*)setPageTypeWithPage:(CGTKWidget*) page andType:(GtkAssistantPageType) type;

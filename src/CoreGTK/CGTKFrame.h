@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) label;
+-(id)init:(OFString*) label;
 
 /**
  * Methods
@@ -49,11 +49,11 @@
 -(GtkFrame*)FRAME;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(void*)getLabelAlignWithXalign:(gfloat*) xalign andYalign:(gfloat*) yalign;
@@ -78,11 +78,11 @@
 -(GtkShadowType)getShadowType;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setLabelAlignWithXalign:(gfloat) xalign andYalign:(gfloat) yalign;

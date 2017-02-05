@@ -55,9 +55,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_header_bar_get_custom_title(GTK_HEADER_BAR([self GOBJECT]))];
 }
 
--(NSString*)getDecorationLayout
+-(OFString*)getDecorationLayout
 {
-	return [NSString stringWithUTF8String:gtk_header_bar_get_decoration_layout(GTK_HEADER_BAR([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_header_bar_get_decoration_layout(GTK_HEADER_BAR([self GOBJECT]))];
 }
 
 -(BOOL)getHasSubtitle
@@ -70,14 +70,14 @@
 	return (gtk_header_bar_get_show_close_button(GTK_HEADER_BAR([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getSubtitle
+-(OFString*)getSubtitle
 {
-	return [NSString stringWithUTF8String:gtk_header_bar_get_subtitle(GTK_HEADER_BAR([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_header_bar_get_subtitle(GTK_HEADER_BAR([self GOBJECT]))];
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_header_bar_get_title(GTK_HEADER_BAR([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_header_bar_get_title(GTK_HEADER_BAR([self GOBJECT]))];
 }
 
 -(void)packEnd:(CGTKWidget*) child
@@ -95,7 +95,7 @@
 	gtk_header_bar_set_custom_title(GTK_HEADER_BAR([self GOBJECT]), [titleWidget WIDGET]);
 }
 
--(void)setDecorationLayout:(NSString*) layout
+-(void)setDecorationLayout:(OFString*) layout
 {
 	gtk_header_bar_set_decoration_layout(GTK_HEADER_BAR([self GOBJECT]), [layout UTF8String]);
 }
@@ -110,12 +110,12 @@
 	gtk_header_bar_set_show_close_button(GTK_HEADER_BAR([self GOBJECT]), (setting ? TRUE : FALSE));
 }
 
--(void)setSubtitle:(NSString*) subtitle
+-(void)setSubtitle:(OFString*) subtitle
 {
 	gtk_header_bar_set_subtitle(GTK_HEADER_BAR([self GOBJECT]), [subtitle UTF8String]);
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_header_bar_set_title(GTK_HEADER_BAR([self GOBJECT]), [title UTF8String]);
 }

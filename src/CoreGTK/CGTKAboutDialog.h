@@ -40,230 +40,230 @@
 /**
  * Constructors
  */
--(id)init;
+- (id)init;
 
 /**
  * Methods
  */
 
--(GtkAboutDialog*)ABOUTDIALOG;
+- (GtkAboutDialog *)ABOUTDIALOG;
 
 /**
- * -(void*)addCreditSectionWithSectionName:(NSString*) sectionName andPeople:(gchar**) people;
+ * -(void*)addCreditSectionWithSectionName:(OFString*) sectionName andPeople:(gchar**) people;
  *
  * @param sectionName
  * @param people
  */
--(void)addCreditSectionWithSectionName:(NSString*) sectionName andPeople:(gchar**) people;
+- (void)addCreditSectionWithSectionName:(OFString *)sectionName andPeople:(const gchar **)people;
 
 /**
  * -(gchar***)getArtists;
  *
  * @returns gchar**
  */
--(gchar**)getArtists;
+- (const gchar * const *)getArtists;
 
 /**
  * -(gchar***)getAuthors;
  *
  * @returns gchar**
  */
--(gchar**)getAuthors;
+- (const gchar * const *)getAuthors;
 
 /**
- * -(NSString**)getComments;
+ * -(OFString**)getComments;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getComments;
+- (OFString *)getComments;
 
 /**
- * -(NSString**)getCopyright;
+ * -(OFString**)getCopyright;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getCopyright;
+- (OFString *)getCopyright;
 
 /**
  * -(gchar***)getDocumenters;
  *
  * @returns gchar**
  */
--(gchar**)getDocumenters;
+- (const gchar * const *)getDocumenters;
 
 /**
- * -(NSString**)getLicense;
+ * -(OFString**)getLicense;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLicense;
+- (OFString *)getLicense;
 
 /**
  * -(GtkLicense*)getLicenseType;
  *
  * @returns GtkLicense
  */
--(GtkLicense)getLicenseType;
+- (GtkLicense)getLicenseType;
 
 /**
  * -(GdkPixbuf**)getLogo;
  *
  * @returns GdkPixbuf*
  */
--(GdkPixbuf*)getLogo;
+- (GdkPixbuf *)getLogo;
 
 /**
- * -(NSString**)getLogoIconName;
+ * -(OFString**)getLogoIconName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLogoIconName;
+- (OFString *)getLogoIconName;
 
 /**
- * -(NSString**)getProgramName;
+ * -(OFString**)getProgramName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getProgramName;
+- (OFString *)getProgramName;
 
 /**
- * -(NSString**)getTranslatorCredits;
+ * -(OFString**)getTranslatorCredits;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTranslatorCredits;
+- (OFString *)getTranslatorCredits;
 
 /**
- * -(NSString**)getVersion;
+ * -(OFString**)getVersion;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getVersion;
+- (OFString *)getVersion;
 
 /**
- * -(NSString**)getWebsite;
+ * -(OFString**)getWebsite;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getWebsite;
+- (OFString *)getWebsite;
 
 /**
- * -(NSString**)getWebsiteLabel;
+ * -(OFString**)getWebsiteLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getWebsiteLabel;
+- (OFString *)getWebsiteLabel;
 
 /**
  * -(BOOL*)getWrapLicense;
  *
  * @returns BOOL
  */
--(BOOL)getWrapLicense;
+- (BOOL)getWrapLicense;
 
 /**
  * -(void*)setArtists:(gchar**) artists;
  *
  * @param artists
  */
--(void)setArtists:(gchar**) artists;
+- (void)setArtists:(const gchar **)artists;
 
 /**
  * -(void*)setAuthors:(gchar**) authors;
  *
  * @param authors
  */
--(void)setAuthors:(gchar**) authors;
+- (void)setAuthors:(const gchar **)authors;
 
 /**
- * -(void*)setComments:(NSString*) comments;
+ * -(void*)setComments:(OFString*) comments;
  *
  * @param comments
  */
--(void)setComments:(NSString*) comments;
+- (void)setComments:(OFString *)comments;
 
 /**
- * -(void*)setCopyright:(NSString*) copyright;
+ * -(void*)setCopyright:(OFString*) copyright;
  *
  * @param copyright
  */
--(void)setCopyright:(NSString*) copyright;
+- (void)setCopyright:(OFString *)copyright;
 
 /**
  * -(void*)setDocumenters:(gchar**) documenters;
  *
  * @param documenters
  */
--(void)setDocumenters:(gchar**) documenters;
+- (void)setDocumenters:(const gchar **)documenters;
 
 /**
- * -(void*)setLicense:(NSString*) license;
+ * -(void*)setLicense:(OFString*) license;
  *
  * @param license
  */
--(void)setLicense:(NSString*) license;
+- (void)setLicense:(OFString *)license;
 
 /**
  * -(void*)setLicenseType:(GtkLicense) licenseType;
  *
  * @param licenseType
  */
--(void)setLicenseType:(GtkLicense) licenseType;
+- (void)setLicenseType:(GtkLicense)licenseType;
 
 /**
  * -(void*)setLogo:(GdkPixbuf*) logo;
  *
  * @param logo
  */
--(void)setLogo:(GdkPixbuf*) logo;
+- (void)setLogo:(GdkPixbuf *)logo;
 
 /**
- * -(void*)setLogoIconName:(NSString*) iconName;
+ * -(void*)setLogoIconName:(OFString*) iconName;
  *
  * @param iconName
  */
--(void)setLogoIconName:(NSString*) iconName;
+- (void)setLogoIconName:(OFString *)iconName;
 
 /**
- * -(void*)setProgramName:(NSString*) name;
+ * -(void*)setProgramName:(OFString*) name;
  *
  * @param name
  */
--(void)setProgramName:(NSString*) name;
+- (void)setProgramName:(OFString *)name;
 
 /**
- * -(void*)setTranslatorCredits:(NSString*) translatorCredits;
+ * -(void*)setTranslatorCredits:(OFString*) translatorCredits;
  *
  * @param translatorCredits
  */
--(void)setTranslatorCredits:(NSString*) translatorCredits;
+- (void)setTranslatorCredits:(OFString *)translatorCredits;
 
 /**
- * -(void*)setVersion:(NSString*) version;
+ * -(void*)setVersion:(OFString*) version;
  *
  * @param version
  */
--(void)setVersion:(NSString*) version;
+- (void)setVersion:(OFString *)version;
 
 /**
- * -(void*)setWebsite:(NSString*) website;
+ * -(void*)setWebsite:(OFString*) website;
  *
  * @param website
  */
--(void)setWebsite:(NSString*) website;
+- (void)setWebsite:(OFString *)website;
 
 /**
- * -(void*)setWebsiteLabel:(NSString*) websiteLabel;
+ * -(void*)setWebsiteLabel:(OFString*) websiteLabel;
  *
  * @param websiteLabel
  */
--(void)setWebsiteLabel:(NSString*) websiteLabel;
+- (void)setWebsiteLabel:(OFString *)websiteLabel;
 
 /**
  * -(void*)setWrapLicense:(BOOL) wrapLicense;
  *
  * @param wrapLicense
  */
--(void)setWrapLicense:(BOOL) wrapLicense;
+- (void)setWrapLicense:(BOOL)wrapLicense;
 
 @end

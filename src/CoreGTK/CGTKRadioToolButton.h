@@ -41,9 +41,9 @@
  * Constructors
  */
 -(id)init:(GSList*) group;
--(id)initFromStockWithGroup:(GSList*) group andStockId:(NSString*) stockId;
+-(id)initFromStockWithGroup:(GSList*) group andStockId:(OFString*) stockId;
 -(id)initFromWidget:(GtkRadioToolButton*) group;
--(id)initWithStockFromWidgetWithGroup:(GtkRadioToolButton*) group andStockId:(NSString*) stockId;
+-(id)initWithStockFromWidgetWithGroup:(GtkRadioToolButton*) group andStockId:(OFString*) stockId;
 
 /**
  * Methods

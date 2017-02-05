@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)initWithLabel:(NSString*) label andXalign:(gfloat) xalign andYalign:(gfloat) yalign andRatio:(gfloat) ratio andObeyChild:(BOOL) obeyChild;
+-(id)initWithLabel:(OFString*) label andXalign:(gfloat) xalign andYalign:(gfloat) yalign andRatio:(gfloat) ratio andObeyChild:(BOOL) obeyChild;
 
 /**
  * Methods

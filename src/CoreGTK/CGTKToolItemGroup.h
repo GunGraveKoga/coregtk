@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) label;
+-(id)init:(OFString*) label;
 
 /**
  * Methods
@@ -87,11 +87,11 @@
 -(gint)getItemPosition:(GtkToolItem*) item;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(CGTKWidget**)getLabelWidget;
@@ -153,11 +153,11 @@
 -(void)setItemPositionWithItem:(GtkToolItem*) item andPosition:(gint) position;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setLabelWidget:(CGTKWidget*) labelWidget;

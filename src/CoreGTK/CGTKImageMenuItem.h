@@ -41,9 +41,9 @@
  * Constructors
  */
 -(id)init;
--(id)initFromStockWithStockId:(NSString*) stockId andAccelGroup:(GtkAccelGroup*) accelGroup;
--(id)initWithLabel:(NSString*) label;
--(id)initWithMnemonic:(NSString*) label;
+-(id)initFromStockWithStockId:(OFString*) stockId andAccelGroup:(GtkAccelGroup*) accelGroup;
+-(id)initWithLabel:(OFString*) label;
+-(id)initWithMnemonic:(OFString*) label;
 
 /**
  * Methods

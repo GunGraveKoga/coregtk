@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) contentType;
+-(id)init:(OFString*) contentType;
 
 /**
  * Methods
@@ -49,11 +49,11 @@
 -(GtkAppChooserWidget*)APPCHOOSERWIDGET;
 
 /**
- * -(NSString**)getDefaultText;
+ * -(OFString**)getDefaultText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getDefaultText;
+-(OFString*)getDefaultText;
 
 /**
  * -(BOOL*)getShowAll;
@@ -91,11 +91,11 @@
 -(BOOL)getShowRecommended;
 
 /**
- * -(void*)setDefaultText:(NSString*) text;
+ * -(void*)setDefaultText:(OFString*) text;
  *
  * @param text
  */
--(void)setDefaultText:(NSString*) text;
+-(void)setDefaultText:(OFString*) text;
 
 /**
  * -(void*)setShowAll:(BOOL) setting;

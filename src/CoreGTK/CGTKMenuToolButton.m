@@ -33,7 +33,7 @@
 
 @implementation CGTKMenuToolButton
 
--(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(NSString*) label
+-(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_menu_tool_button_new([iconWidget WIDGET], [label UTF8String])];
 
@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initFromStock:(NSString*) stockId
+-(id)initFromStock:(OFString*) stockId
 {
 	self = [super initWithGObject:(GObject *)gtk_menu_tool_button_new_from_stock([stockId UTF8String])];
 
@@ -67,12 +67,12 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_menu_tool_button_get_menu(GTK_MENU_TOOL_BUTTON([self GOBJECT]))];
 }
 
--(void)setArrowTooltipMarkup:(NSString*) markup
+-(void)setArrowTooltipMarkup:(OFString*) markup
 {
 	gtk_menu_tool_button_set_arrow_tooltip_markup(GTK_MENU_TOOL_BUTTON([self GOBJECT]), [markup UTF8String]);
 }
 
--(void)setArrowTooltipText:(NSString*) text
+-(void)setArrowTooltipText:(OFString*) text
 {
 	gtk_menu_tool_button_set_arrow_tooltip_text(GTK_MENU_TOOL_BUTTON([self GOBJECT]), [text UTF8String]);
 }

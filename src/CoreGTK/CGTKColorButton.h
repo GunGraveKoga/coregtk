@@ -72,11 +72,11 @@
 -(void)getRgba:(GdkRGBA*) rgba;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(BOOL*)getUseAlpha;
@@ -107,11 +107,11 @@
 -(void)setRgba:(const GdkRGBA*) rgba;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 /**
  * -(void*)setUseAlpha:(BOOL) useAlpha;

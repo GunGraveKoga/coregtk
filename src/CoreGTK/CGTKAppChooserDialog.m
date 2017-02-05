@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initForContentTypeWithParent:(GtkWindow*) parent andFlags:(GtkDialogFlags) flags andContentType:(NSString*) contentType
+-(id)initForContentTypeWithParent:(GtkWindow*) parent andFlags:(GtkDialogFlags) flags andContentType:(OFString*) contentType
 {
 	self = [super initWithGObject:(GObject *)gtk_app_chooser_dialog_new_for_content_type(parent, flags, [contentType UTF8String])];
 
@@ -62,9 +62,9 @@
 	return GTK_APP_CHOOSER_DIALOG([self GOBJECT]);
 }
 
--(NSString*)getHeading
+-(OFString*)getHeading
 {
-	return [NSString stringWithUTF8String:gtk_app_chooser_dialog_get_heading(GTK_APP_CHOOSER_DIALOG([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_app_chooser_dialog_get_heading(GTK_APP_CHOOSER_DIALOG([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getWidget
@@ -72,7 +72,7 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_app_chooser_dialog_get_widget(GTK_APP_CHOOSER_DIALOG([self GOBJECT]))];
 }
 
--(void)setHeading:(NSString*) heading
+-(void)setHeading:(OFString*) heading
 {
 	gtk_app_chooser_dialog_set_heading(GTK_APP_CHOOSER_DIALOG([self GOBJECT]), [heading UTF8String]);
 }

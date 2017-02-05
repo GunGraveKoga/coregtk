@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initWithMarkup:(NSString*) markup
+-(id)initWithMarkup:(OFString*) markup
 {
 	self = [super initWithGObject:(GObject *)gtk_cell_view_new_with_markup([markup UTF8String])];
 
@@ -81,7 +81,7 @@
 	return self;
 }
 
--(id)initWithText:(NSString*) text
+-(id)initWithText:(OFString*) text
 {
 	self = [super initWithGObject:(GObject *)gtk_cell_view_new_with_text([text UTF8String])];
 

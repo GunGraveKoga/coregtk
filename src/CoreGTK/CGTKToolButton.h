@@ -40,8 +40,8 @@
 /**
  * Constructors
  */
--(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(NSString*) label;
--(id)initFromStock:(NSString*) stockId;
+-(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(OFString*) label;
+-(id)initFromStock:(OFString*) stockId;
 
 /**
  * Methods
@@ -50,11 +50,11 @@
 -(GtkToolButton*)TOOLBUTTON;
 
 /**
- * -(NSString**)getIconName;
+ * -(OFString**)getIconName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconName;
+-(OFString*)getIconName;
 
 /**
  * -(CGTKWidget**)getIconWidget;
@@ -64,11 +64,11 @@
 -(CGTKWidget*)getIconWidget;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(CGTKWidget**)getLabelWidget;
@@ -78,11 +78,11 @@
 -(CGTKWidget*)getLabelWidget;
 
 /**
- * -(NSString**)getStockId;
+ * -(OFString**)getStockId;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getStockId;
+-(OFString*)getStockId;
 
 /**
  * -(BOOL*)getUseUnderline;
@@ -92,11 +92,11 @@
 -(BOOL)getUseUnderline;
 
 /**
- * -(void*)setIconName:(NSString*) iconName;
+ * -(void*)setIconName:(OFString*) iconName;
  *
  * @param iconName
  */
--(void)setIconName:(NSString*) iconName;
+-(void)setIconName:(OFString*) iconName;
 
 /**
  * -(void*)setIconWidget:(CGTKWidget*) iconWidget;
@@ -106,11 +106,11 @@
 -(void)setIconWidget:(CGTKWidget*) iconWidget;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setLabelWidget:(CGTKWidget*) labelWidget;
@@ -120,11 +120,11 @@
 -(void)setLabelWidget:(CGTKWidget*) labelWidget;
 
 /**
- * -(void*)setStockId:(NSString*) stockId;
+ * -(void*)setStockId:(OFString*) stockId;
  *
  * @param stockId
  */
--(void)setStockId:(NSString*) stockId;
+-(void)setStockId:(OFString*) stockId;
 
 /**
  * -(void*)setUseUnderline:(BOOL) useUnderline;

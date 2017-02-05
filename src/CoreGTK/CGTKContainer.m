@@ -33,10 +33,10 @@
 
 @implementation CGTKContainer
 
--(void)addWidget:(CGTKWidget *)widget withProperties:(NSDictionary *)properties
+-(void)addWidget:(CGTKWidget *)widget withProperties:(OFDictionary *)properties
 {
 	CGTKTypeWrapper *wrapper;
-	for(NSString *propName in properties)
+	for(OFString *propName in properties)
 	{
 		wrapper = [properties objectForKey:propName];
 		
@@ -59,17 +59,17 @@
 	gtk_container_check_resize(GTK_CONTAINER([self GOBJECT]));
 }
 
--(void)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(GValue*) value
+-(void)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(GValue*) value
 {
 	gtk_container_child_get_property(GTK_CONTAINER([self GOBJECT]), [child WIDGET], [propertyName UTF8String], value);
 }
 
--(void)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs
+-(void)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs
 {
 	gtk_container_child_get_valist(GTK_CONTAINER([self GOBJECT]), [child WIDGET], [firstPropertyName UTF8String], varArgs);
 }
 
--(void)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(NSString*) childProperty
+-(void)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(OFString*) childProperty
 {
 	gtk_container_child_notify(GTK_CONTAINER([self GOBJECT]), [child WIDGET], [childProperty UTF8String]);
 }
@@ -79,12 +79,12 @@
 	gtk_container_child_notify_by_pspec(GTK_CONTAINER([self GOBJECT]), [child WIDGET], pspec);
 }
 
--(void)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(const GValue*) value
+-(void)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(const GValue*) value
 {
 	gtk_container_child_set_property(GTK_CONTAINER([self GOBJECT]), [child WIDGET], [propertyName UTF8String], value);
 }
 
--(void)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs
+-(void)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs
 {
 	gtk_container_child_set_valist(GTK_CONTAINER([self GOBJECT]), [child WIDGET], [firstPropertyName UTF8String], varArgs);
 }

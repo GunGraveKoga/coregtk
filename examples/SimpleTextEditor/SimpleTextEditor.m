@@ -26,115 +26,102 @@
 
 @implementation SimpleTextEditor
 
--(id)init
-{
-	self = [super init];
-	
-	if(self)
-	{
-		CGTKBuilder *builder = [[CGTKBuilder alloc] init];
-		if(![builder addFromFileWithFilename:@"gui.glade" andErr:NULL])
-		{
-			NSLog(@"Error loading GUI file");
-			return nil;
-		}
-		
-		NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
-			[CGTKCallbackData withObject:self andSEL:@selector(winMain_Destroy)], @"winMain_Destroy",
-			[CGTKCallbackData withObject:self andSEL:@selector(btnNew_Clicked)], @"btnNew_Clicked",
-			[CGTKCallbackData withObject:self andSEL:@selector(btnOpen_Clicked)], @"btnOpen_Clicked",
-			[CGTKCallbackData withObject:self andSEL:@selector(btnSave_Clicked)], @"btnSave_Clicked",
-			nil];
-		
-		[CGTKBaseBuilder connectSignalsToObjectsWithBuilder:builder andSignalDictionary:dic];
-		
-		// Get a reference to the window
-		window = [CGTKBaseBuilder getWidgetFromBuilder:builder withName:@"winMain"];
-		
-		// Get a reference to the text view
-		txtView = [[CGTKTextView alloc] initWithGObject:[[CGTKBaseBuilder getWidgetFromBuilder:builder withName:@"txtView"] WIDGET]];
-		
-		[builder release];
-	}
-	
-	return self;
+- (id) init {
+    self = [super init];
+
+    if (self) {
+        CGTKBuilder * builder = [[CGTKBuilder alloc] init];
+        OFString * guiGlade = [OFString stringWithContentsOfFile:@"gui.glade"];
+
+        if (![builder addFromStringWithBuffer:guiGlade andLength:[guiGlade UTF8StringLength] andErr:NULL]) {
+            of_log(@"Error loading GUI file");
+            return nil;
+        }
+
+        OFDictionary * dic = [[OFDictionary alloc] initWithKeysAndObjects:
+                              @"winMain_Destroy", [CGTKCallbackData withObject:self andSEL:@selector(winMain_Destroy)],
+                              @"btnNew_Clicked", [CGTKCallbackData withObject:self andSEL:@selector(btnNew_Clicked)],
+                              @"btnOpen_Clicked", [CGTKCallbackData withObject:self andSEL:@selector(btnOpen_Clicked)],
+                              @"btnSave_Clicked", [CGTKCallbackData withObject:self andSEL:@selector(btnSave_Clicked)],
+                              nil];
+
+        [CGTKBaseBuilder connectSignalsToObjectsWithBuilder:builder andSignalDictionary:dic];
+
+        // Get a reference to the window
+        window = [CGTKBaseBuilder getWidgetFromBuilder:builder withName:@"winMain"];
+
+        // Get a reference to the text view
+        txtView = [[CGTKTextView alloc] initWithGObject:[[CGTKBaseBuilder getWidgetFromBuilder:builder withName:@"txtView"] WIDGET]];
+
+        [builder release];
+    }
+
+    return self;
+} /* init */
+
+- (void) show {
+    [window showAll];
 }
 
--(void)show
-{
-	[window showAll];
+- (void) winMain_Destroy {
+    [CGTK mainQuit];
 }
 
--(void)winMain_Destroy
-{
-	[CGTK mainQuit];
+- (void) btnNew_Clicked {
+    [self setText:@""];
 }
 
--(void)btnNew_Clicked
-{
-	[self setText:@""];
+- (void) btnOpen_Clicked {
+    OFString * text = [OFString stringWithContentsOfFile:[MultiDialog presentOpenDialog]];
+
+    [self setText:text];
 }
 
--(void)btnOpen_Clicked
-{
-	NSString *text = [NSString stringWithContentsOfFile:[MultiDialog presentOpenDialog]];	
-	[self setText:text];
+- (void) btnSave_Clicked {
+    OFString * filename = [MultiDialog presentSaveDialog];
+    OFString * text = [self getText];
+
+    [text writeToFile:filename];
+
 }
 
--(void)btnSave_Clicked
-{
-	NSString *filename = [MultiDialog presentSaveDialog];
-	NSString *text = [self getText];
-		
-	NSError *error;
-	BOOL succeed = [text writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:&error];
+- (OFString *) getText {
+    gchar * gText = NULL;
+    GtkTextBuffer * buf = NULL;
+    GtkTextIter start, end;
+    OFString * nsText = nil;
 
-	if(!succeed)
-	{
-		NSLog(@"%@:%s Error saving: %@", [self class], _cmd, [error localizedDescription]);
-	}
+    // Grab reference to text buffer
+    buf = [txtView getBuffer];
+
+    // Determine the bounds of the buffer
+    gtk_text_buffer_get_bounds(buf, &start, &end);
+
+    // Get the gchar text from the buffer
+    gText = gtk_text_buffer_get_text(buf, &start, &end, FALSE);
+
+    // Convert it to an OFString
+    nsText = [OFString stringWithUTF8String:gText];
+
+    // Free the allocated gchar string
+    g_free(gText);
+
+    // Return the text
+    return nsText;
+} /* getText */
+
+- (void) setText:(OFString *)text {
+    // Get reference to text buffer
+    GtkTextBuffer * buf = [txtView getBuffer];
+
+    // Set contents of text buffer
+    gtk_text_buffer_set_text(buf, [text UTF8String], -1);
 }
 
--(NSString *)getText
-{
-	gchar *gText = NULL;
-	GtkTextBuffer *buf = NULL;
-	GtkTextIter start, end;
-	NSString *nsText = nil;
-	
-	// Grab reference to text buffer
-	buf = [txtView getBuffer];
-	
-	// Determine the bounds of the buffer
-	gtk_text_buffer_get_bounds (buf, &start, &end);
-	
-	// Get the gchar text from the buffer
-	gText = gtk_text_buffer_get_text(buf, &start, &end, FALSE);
-	
-	// Convert it to an NSString
-	nsText = [NSString stringWithUTF8String:gText];
-	
-	// Free the allocated gchar string
-	g_free(gText);
-
-	// Return the text
-	return nsText;
-}
-
--(void)setText:(NSString *)text
-{
-	// Get reference to text buffer
-	GtkTextBuffer *buf = [txtView getBuffer];
-	
-	// Set contents of text buffer
-	gtk_text_buffer_set_text(buf, [text UTF8String], -1);
-}
-
--(void)dealloc
-{
-	[txtView release];
-	[window release];
-	[super dealloc];
+- (void) dealloc {
+    [txtView release];
+    [window release];
+    [super dealloc];
 }
 
 @end

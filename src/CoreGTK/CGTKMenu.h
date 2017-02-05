@@ -86,11 +86,11 @@
 -(GtkAccelGroup*)getAccelGroup;
 
 /**
- * -(NSString**)getAccelPath;
+ * -(OFString**)getAccelPath;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getAccelPath;
+-(OFString*)getAccelPath;
 
 /**
  * -(CGTKWidget**)getActive;
@@ -128,11 +128,11 @@
 -(BOOL)getTearoffState;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(void*)popdown;
@@ -188,11 +188,11 @@
 -(void)setAccelGroup:(GtkAccelGroup*) accelGroup;
 
 /**
- * -(void*)setAccelPath:(NSString*) accelPath;
+ * -(void*)setAccelPath:(OFString*) accelPath;
  *
  * @param accelPath
  */
--(void)setAccelPath:(NSString*) accelPath;
+-(void)setAccelPath:(OFString*) accelPath;
 
 /**
  * -(void*)setActive:(guint) index;
@@ -230,10 +230,10 @@
 -(void)setTearoffState:(BOOL) tornOff;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 @end

@@ -48,9 +48,9 @@
 
 -(GtkDialog*)DIALOG;
 
--(void)addButtons:(NSDictionary *)buttonTextDict;
+-(void)addButtons:(OFDictionary *)buttonTextDict;
 
--(id)initWithTitle:(NSString *)title andParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andButtonTextResponseDictionary:(NSDictionary *)buttonTextDict;
+-(id)initWithTitle:(OFString *)title andParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andButtonTextResponseDictionary:(OFDictionary *)buttonTextDict;
 
 /**
  * -(void*)addActionWidgetWithChild:(CGTKWidget*) child andResponseId:(gint) responseId;
@@ -61,13 +61,13 @@
 -(void)addActionWidgetWithChild:(CGTKWidget*) child andResponseId:(gint) responseId;
 
 /**
- * -(CGTKWidget**)addButtonWithButtonText:(NSString*) buttonText andResponseId:(gint) responseId;
+ * -(CGTKWidget**)addButtonWithButtonText:(OFString*) buttonText andResponseId:(gint) responseId;
  *
  * @param buttonText
  * @param responseId
  * @returns CGTKWidget*
  */
--(CGTKWidget*)addButtonWithButtonText:(NSString*) buttonText andResponseId:(gint) responseId;
+-(CGTKWidget*)addButtonWithButtonText:(OFString*) buttonText andResponseId:(gint) responseId;
 
 /**
  * -(CGTKWidget**)getActionArea;

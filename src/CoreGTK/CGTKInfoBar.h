@@ -48,9 +48,9 @@
 
 -(GtkInfoBar*)INFOBAR;
 
--(void)addButtonTextResponseDictionary:(NSDictionary *)buttonTextDict;
+-(void)addButtonTextResponseDictionary:(OFDictionary *)buttonTextDict;
 
--(id)initWithButtonTextResponseDictionary:(NSDictionary *)buttonTextDict;
+-(id)initWithButtonTextResponseDictionary:(OFDictionary *)buttonTextDict;
 
 /**
  * -(void*)addActionWidgetWithChild:(CGTKWidget*) child andResponseId:(gint) responseId;
@@ -61,13 +61,13 @@
 -(void)addActionWidgetWithChild:(CGTKWidget*) child andResponseId:(gint) responseId;
 
 /**
- * -(CGTKWidget**)addButtonWithButtonText:(NSString*) buttonText andResponseId:(gint) responseId;
+ * -(CGTKWidget**)addButtonWithButtonText:(OFString*) buttonText andResponseId:(gint) responseId;
  *
  * @param buttonText
  * @param responseId
  * @returns CGTKWidget*
  */
--(CGTKWidget*)addButtonWithButtonText:(NSString*) buttonText andResponseId:(gint) responseId;
+-(CGTKWidget*)addButtonWithButtonText:(OFString*) buttonText andResponseId:(gint) responseId;
 
 /**
  * -(CGTKWidget**)getActionArea;

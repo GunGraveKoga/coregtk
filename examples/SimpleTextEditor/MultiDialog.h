@@ -24,11 +24,11 @@
  */
 #import "CoreGTK/CGTKFileChooserDialog.h"
  
-@interface MultiDialog : NSObject
+@interface MultiDialog : OFObject
 {
 }
 
-+(NSString *)presentOpenDialog;
-+(NSString *)presentSaveDialog;
++(OFString *)presentOpenDialog;
++(OFString *)presentSaveDialog;
 
 @end

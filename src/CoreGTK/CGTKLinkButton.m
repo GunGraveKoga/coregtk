@@ -33,7 +33,7 @@
 
 @implementation CGTKLinkButton
 
--(id)init:(NSString*) uri
+-(id)init:(OFString*) uri
 {
 	self = [super initWithGObject:(GObject *)gtk_link_button_new([uri UTF8String])];
 
@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithLabelWithUri:(NSString*) uri andLabel:(NSString*) label
+-(id)initWithLabelWithUri:(OFString*) uri andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_link_button_new_with_label([uri UTF8String], [label UTF8String])];
 
@@ -62,9 +62,9 @@
 	return GTK_LINK_BUTTON([self GOBJECT]);
 }
 
--(NSString*)getUri
+-(OFString*)getUri
 {
-	return [NSString stringWithUTF8String:gtk_link_button_get_uri(GTK_LINK_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_link_button_get_uri(GTK_LINK_BUTTON([self GOBJECT]))];
 }
 
 -(BOOL)getVisited
@@ -72,7 +72,7 @@
 	return (gtk_link_button_get_visited(GTK_LINK_BUTTON([self GOBJECT])) ? YES : NO);
 }
 
--(void)setUri:(NSString*) uri
+-(void)setUri:(OFString*) uri
 {
 	gtk_link_button_set_uri(GTK_LINK_BUTTON([self GOBJECT]), [uri UTF8String]);
 }

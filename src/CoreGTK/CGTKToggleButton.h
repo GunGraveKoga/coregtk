@@ -41,8 +41,8 @@
  * Constructors
  */
 -(id)init;
--(id)initWithLabel:(NSString*) label;
--(id)initWithMnemonic:(NSString*) label;
+-(id)initWithLabel:(OFString*) label;
+-(id)initWithMnemonic:(OFString*) label;
 
 /**
  * Methods

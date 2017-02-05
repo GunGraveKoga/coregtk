@@ -59,7 +59,7 @@
 -(BOOL)activate;
 
 /**
- * -(void*)addAcceleratorWithAccelSignal:(NSString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags;
+ * -(void*)addAcceleratorWithAccelSignal:(OFString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags;
  *
  * @param accelSignal
  * @param accelGroup
@@ -67,7 +67,7 @@
  * @param accelMods
  * @param accelFlags
  */
--(void)addAcceleratorWithAccelSignal:(NSString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags;
+-(void)addAcceleratorWithAccelSignal:(OFString*) accelSignal andAccelGroup:(GtkAccelGroup*) accelGroup andAccelKey:(guint) accelKey andAccelMods:(GdkModifierType) accelMods andAccelFlags:(GtkAccelFlags) accelFlags;
 
 /**
  * -(void*)addDeviceEventsWithDevice:(GdkDevice*) device andEvents:(GdkEventMask) events;
@@ -118,11 +118,11 @@
 -(BOOL)childFocus:(GtkDirectionType) direction;
 
 /**
- * -(void*)childNotify:(NSString*) childProperty;
+ * -(void*)childNotify:(OFString*) childProperty;
  *
  * @param childProperty
  */
--(void)childNotify:(NSString*) childProperty;
+-(void)childNotify:(OFString*) childProperty;
 
 /**
  * -(void*)classPathWithPathLength:(guint*) pathLength andPath:(gchar**) path andPathReversed:(gchar**) pathReversed;
@@ -149,12 +149,12 @@
 -(PangoContext*)createPangoContext;
 
 /**
- * -(PangoLayout**)createPangoLayout:(NSString*) text;
+ * -(PangoLayout**)createPangoLayout:(OFString*) text;
  *
  * @param text
  * @returns PangoLayout*
  */
--(PangoLayout*)createPangoLayout:(NSString*) text;
+-(PangoLayout*)createPangoLayout:(OFString*) text;
 
 /**
  * -(void*)destroy;
@@ -350,11 +350,11 @@
 -(void)gtkDragSourceSetIconGicon:(GIcon*) icon;
 
 /**
- * -(void*)gtkDragSourceSetIconName:(NSString*) iconName;
+ * -(void*)gtkDragSourceSetIconName:(OFString*) iconName;
  *
  * @param iconName
  */
--(void)gtkDragSourceSetIconName:(NSString*) iconName;
+-(void)gtkDragSourceSetIconName:(OFString*) iconName;
 
 /**
  * -(void*)gtkDragSourceSetIconPixbuf:(GdkPixbuf*) pixbuf;
@@ -364,11 +364,11 @@
 -(void)gtkDragSourceSetIconPixbuf:(GdkPixbuf*) pixbuf;
 
 /**
- * -(void*)gtkDragSourceSetIconStock:(NSString*) stockId;
+ * -(void*)gtkDragSourceSetIconStock:(OFString*) stockId;
  *
  * @param stockId
  */
--(void)gtkDragSourceSetIconStock:(NSString*) stockId;
+-(void)gtkDragSourceSetIconStock:(OFString*) stockId;
 
 /**
  * -(void*)gtkDragSourceSetTargetList:(GtkTargetList*) targetList;
@@ -430,12 +430,12 @@
 -(AtkObject*)getAccessible;
 
 /**
- * -(GActionGroup**)getActionGroup:(NSString*) prefix;
+ * -(GActionGroup**)getActionGroup:(OFString*) prefix;
  *
  * @param prefix
  * @returns GActionGroup*
  */
--(GActionGroup*)getActionGroup:(NSString*) prefix;
+-(GActionGroup*)getActionGroup:(OFString*) prefix;
 
 /**
  * -(int*)getAllocatedBaseline;
@@ -524,11 +524,11 @@
 -(GtkClipboard*)getClipboard:(GdkAtom) selection;
 
 /**
- * -(NSString**)getCompositeName;
+ * -(OFString**)getCompositeName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getCompositeName;
+-(OFString*)getCompositeName;
 
 /**
  * -(BOOL*)getDeviceEnabled:(GdkDevice*) device;
@@ -695,11 +695,11 @@
 -(GtkRcStyle*)getModifierStyle;
 
 /**
- * -(NSString**)getName;
+ * -(OFString**)getName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getName;
+-(OFString*)getName;
 
 /**
  * -(BOOL*)getNoShowAll;
@@ -911,27 +911,27 @@
 -(BOOL)getSupportMultidevice;
 
 /**
- * -(GObject**)getTemplateChildWithWidgetType:(GType) widgetType andName:(NSString*) name;
+ * -(GObject**)getTemplateChildWithWidgetType:(GType) widgetType andName:(OFString*) name;
  *
  * @param widgetType
  * @param name
  * @returns GObject*
  */
--(GObject*)getTemplateChildWithWidgetType:(GType) widgetType andName:(NSString*) name;
+-(GObject*)getTemplateChildWithWidgetType:(GType) widgetType andName:(OFString*) name;
 
 /**
- * -(NSString**)getTooltipMarkup;
+ * -(OFString**)getTooltipMarkup;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTooltipMarkup;
+-(OFString*)getTooltipMarkup;
 
 /**
- * -(NSString**)getTooltipText;
+ * -(OFString**)getTooltipText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTooltipText;
+-(OFString*)getTooltipText;
 
 /**
  * -(GtkWindow**)getTooltipWindow;
@@ -1096,12 +1096,12 @@
 -(void)inputShapeCombineRegion:(cairo_region_t*) region;
 
 /**
- * -(void*)insertActionGroupWithName:(NSString*) name andGroup:(GActionGroup*) group;
+ * -(void*)insertActionGroupWithName:(OFString*) name andGroup:(GActionGroup*) group;
  *
  * @param name
  * @param group
  */
--(void)insertActionGroupWithName:(NSString*) name andGroup:(GActionGroup*) group;
+-(void)insertActionGroupWithName:(OFString*) name andGroup:(GActionGroup*) group;
 
 /**
  * -(BOOL*)intersectWithArea:(const GdkRectangle*) area andIntersection:(GdkRectangle*) intersection;
@@ -1291,12 +1291,12 @@
 -(void)overrideFont:(const PangoFontDescription*) fontDesc;
 
 /**
- * -(void*)overrideSymbolicColorWithName:(NSString*) name andColor:(const GdkRGBA*) color;
+ * -(void*)overrideSymbolicColorWithName:(OFString*) name andColor:(const GdkRGBA*) color;
  *
  * @param name
  * @param color
  */
--(void)overrideSymbolicColorWithName:(NSString*) name andColor:(const GdkRGBA*) color;
+-(void)overrideSymbolicColorWithName:(OFString*) name andColor:(const GdkRGBA*) color;
 
 /**
  * -(void*)pathWithPathLength:(guint*) pathLength andPath:(gchar**) path andPathReversed:(gchar**) pathReversed;
@@ -1394,23 +1394,23 @@
 -(void)removeTickCallback:(guint) id;
 
 /**
- * -(GdkPixbuf**)renderIconWithStockId:(NSString*) stockId andSize:(GtkIconSize) size andDetail:(NSString*) detail;
+ * -(GdkPixbuf**)renderIconWithStockId:(OFString*) stockId andSize:(GtkIconSize) size andDetail:(OFString*) detail;
  *
  * @param stockId
  * @param size
  * @param detail
  * @returns GdkPixbuf*
  */
--(GdkPixbuf*)renderIconWithStockId:(NSString*) stockId andSize:(GtkIconSize) size andDetail:(NSString*) detail;
+-(GdkPixbuf*)renderIconWithStockId:(OFString*) stockId andSize:(GtkIconSize) size andDetail:(OFString*) detail;
 
 /**
- * -(GdkPixbuf**)renderIconPixbufWithStockId:(NSString*) stockId andSize:(GtkIconSize) size;
+ * -(GdkPixbuf**)renderIconPixbufWithStockId:(OFString*) stockId andSize:(GtkIconSize) size;
  *
  * @param stockId
  * @param size
  * @returns GdkPixbuf*
  */
--(GdkPixbuf*)renderIconPixbufWithStockId:(NSString*) stockId andSize:(GtkIconSize) size;
+-(GdkPixbuf*)renderIconPixbufWithStockId:(OFString*) stockId andSize:(GtkIconSize) size;
 
 /**
  * -(void*)reparent:(CGTKWidget*) newParent;
@@ -1448,12 +1448,12 @@
 -(BOOL)sendFocusChange:(GdkEvent*) event;
 
 /**
- * -(void*)setAccelPathWithAccelPath:(NSString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup;
+ * -(void*)setAccelPathWithAccelPath:(OFString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup;
  *
  * @param accelPath
  * @param accelGroup
  */
--(void)setAccelPathWithAccelPath:(NSString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup;
+-(void)setAccelPathWithAccelPath:(OFString*) accelPath andAccelGroup:(GtkAccelGroup*) accelGroup;
 
 /**
  * -(void*)setAllocation:(const GtkAllocation*) allocation;
@@ -1498,11 +1498,11 @@
 -(void)setClip:(const GtkAllocation*) clip;
 
 /**
- * -(void*)setCompositeName:(NSString*) name;
+ * -(void*)setCompositeName:(OFString*) name;
  *
  * @param name
  */
--(void)setCompositeName:(NSString*) name;
+-(void)setCompositeName:(OFString*) name;
 
 /**
  * -(void*)setDeviceEnabledWithDevice:(GdkDevice*) device andEnabled:(BOOL) enabled;
@@ -1640,11 +1640,11 @@
 -(void)setMarginTop:(gint) margin;
 
 /**
- * -(void*)setName:(NSString*) name;
+ * -(void*)setName:(OFString*) name;
  *
  * @param name
  */
--(void)setName:(NSString*) name;
+-(void)setName:(OFString*) name;
 
 /**
  * -(void*)setNoShowAll:(BOOL) noShowAll;
@@ -1740,18 +1740,18 @@
 -(void)setSupportMultidevice:(BOOL) supportMultidevice;
 
 /**
- * -(void*)setTooltipMarkup:(NSString*) markup;
+ * -(void*)setTooltipMarkup:(OFString*) markup;
  *
  * @param markup
  */
--(void)setTooltipMarkup:(NSString*) markup;
+-(void)setTooltipMarkup:(OFString*) markup;
 
 /**
- * -(void*)setTooltipText:(NSString*) text;
+ * -(void*)setTooltipText:(OFString*) text;
  *
  * @param text
  */
--(void)setTooltipText:(NSString*) text;
+-(void)setTooltipText:(OFString*) text;
 
 /**
  * -(void*)setTooltipWindow:(GtkWindow*) customWindow;
@@ -1856,20 +1856,20 @@
 -(void)styleAttach;
 
 /**
- * -(void*)styleGetPropertyWithPropertyName:(NSString*) propertyName andValue:(GValue*) value;
+ * -(void*)styleGetPropertyWithPropertyName:(OFString*) propertyName andValue:(GValue*) value;
  *
  * @param propertyName
  * @param value
  */
--(void)styleGetPropertyWithPropertyName:(NSString*) propertyName andValue:(GValue*) value;
+-(void)styleGetPropertyWithPropertyName:(OFString*) propertyName andValue:(GValue*) value;
 
 /**
- * -(void*)styleGetValistWithFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+ * -(void*)styleGetValistWithFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
  *
  * @param firstPropertyName
  * @param varArgs
  */
--(void)styleGetValistWithFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+-(void)styleGetValistWithFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
 
 /**
  * -(void*)thawChildNotify;

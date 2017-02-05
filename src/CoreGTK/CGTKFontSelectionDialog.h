@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) title;
+-(id)init:(OFString*) title;
 
 /**
  * Methods
@@ -56,11 +56,11 @@
 -(CGTKWidget*)getCancelButton;
 
 /**
- * -(NSString**)getFontName;
+ * -(OFString**)getFontName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getFontName;
+-(OFString*)getFontName;
 
 /**
  * -(CGTKWidget**)getFontSelection;
@@ -77,25 +77,25 @@
 -(CGTKWidget*)getOkButton;
 
 /**
- * -(NSString**)getPreviewText;
+ * -(OFString**)getPreviewText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getPreviewText;
+-(OFString*)getPreviewText;
 
 /**
- * -(BOOL*)setFontName:(NSString*) fontname;
+ * -(BOOL*)setFontName:(OFString*) fontname;
  *
  * @param fontname
  * @returns BOOL
  */
--(BOOL)setFontName:(NSString*) fontname;
+-(BOOL)setFontName:(OFString*) fontname;
 
 /**
- * -(void*)setPreviewText:(NSString*) text;
+ * -(void*)setPreviewText:(OFString*) text;
  *
  * @param text
  */
--(void)setPreviewText:(NSString*) text;
+-(void)setPreviewText:(OFString*) text;
 
 @end

@@ -40,8 +40,8 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) label;
--(id)initWithMnemonic:(NSString*) label;
+-(id)init:(OFString*) label;
+-(id)initWithMnemonic:(OFString*) label;
 
 /**
  * Methods
@@ -57,11 +57,11 @@
 -(BOOL)getExpanded;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(BOOL*)getLabelFill;
@@ -113,11 +113,11 @@
 -(void)setExpanded:(BOOL) expanded;
 
 /**
- * -(void*)setLabel:(NSString*) label;
+ * -(void*)setLabel:(OFString*) label;
  *
  * @param label
  */
--(void)setLabel:(NSString*) label;
+-(void)setLabel:(OFString*) label;
 
 /**
  * -(void*)setLabelFill:(BOOL) labelFill;

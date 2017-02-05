@@ -62,7 +62,7 @@
 	return GTK_SCALE([self GOBJECT]);
 }
 
--(void)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(NSString*) markup
+-(void)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(OFString*) markup
 {
 	gtk_scale_add_mark(GTK_SCALE([self GOBJECT]), value, position, [markup UTF8String]);
 }

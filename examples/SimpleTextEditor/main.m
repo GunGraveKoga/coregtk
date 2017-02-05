@@ -22,14 +22,14 @@
 /*
  * Objective-C imports
  */
-#import <Foundation/Foundation.h>
+#import <ObjFW/ObjFW.h>
 
 #import "CoreGTK/CGTK.h"
 #import "SimpleTextEditor.h"
 
 int main(int argc, char *argv[])
 {	
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	OFAutoreleasePool *pool = [[OFAutoreleasePool alloc] init];
 
 	/* 
 	 * This is called in all GTK applications. Arguments are parsed

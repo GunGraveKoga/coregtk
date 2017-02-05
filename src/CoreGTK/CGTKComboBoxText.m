@@ -62,37 +62,37 @@
 	return GTK_COMBO_BOX_TEXT([self GOBJECT]);
 }
 
--(void)appendWithId:(NSString*) id andText:(NSString*) text
+-(void)appendWithId:(OFString*) id andText:(OFString*) text
 {
 	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT([self GOBJECT]), [id UTF8String], [text UTF8String]);
 }
 
--(void)appendText:(NSString*) text
+-(void)appendText:(OFString*) text
 {
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT([self GOBJECT]), [text UTF8String]);
 }
 
--(NSString*)getActiveText
+-(OFString*)getActiveText
 {
-	return [NSString stringWithUTF8String:gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT([self GOBJECT]))];
 }
 
--(void)insertWithPosition:(gint) position andId:(NSString*) id andText:(NSString*) text
+-(void)insertWithPosition:(gint) position andId:(OFString*) id andText:(OFString*) text
 {
 	gtk_combo_box_text_insert(GTK_COMBO_BOX_TEXT([self GOBJECT]), position, [id UTF8String], [text UTF8String]);
 }
 
--(void)insertTextWithPosition:(gint) position andText:(NSString*) text
+-(void)insertTextWithPosition:(gint) position andText:(OFString*) text
 {
 	gtk_combo_box_text_insert_text(GTK_COMBO_BOX_TEXT([self GOBJECT]), position, [text UTF8String]);
 }
 
--(void)prependWithId:(NSString*) id andText:(NSString*) text
+-(void)prependWithId:(OFString*) id andText:(OFString*) text
 {
 	gtk_combo_box_text_prepend(GTK_COMBO_BOX_TEXT([self GOBJECT]), [id UTF8String], [text UTF8String]);
 }
 
--(void)prependText:(NSString*) text
+-(void)prependText:(OFString*) text
 {
 	gtk_combo_box_text_prepend_text(GTK_COMBO_BOX_TEXT([self GOBJECT]), [text UTF8String]);
 }

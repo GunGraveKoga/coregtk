@@ -40,8 +40,8 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) str;
--(id)initWithMnemonic:(NSString*) str;
+-(id)init:(OFString*) str;
+-(id)initWithMnemonic:(OFString*) str;
 
 /**
  * Methods
@@ -64,11 +64,11 @@
 -(PangoAttrList*)getAttributes;
 
 /**
- * -(NSString**)getCurrentUri;
+ * -(OFString**)getCurrentUri;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getCurrentUri;
+-(OFString*)getCurrentUri;
 
 /**
  * -(PangoEllipsizeMode*)getEllipsize;
@@ -85,11 +85,11 @@
 -(GtkJustification)getJustify;
 
 /**
- * -(NSString**)getLabel;
+ * -(OFString**)getLabel;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getLabel;
+-(OFString*)getLabel;
 
 /**
  * -(PangoLayout**)getLayout;
@@ -172,11 +172,11 @@
 -(BOOL)getSingleLineMode;
 
 /**
- * -(NSString**)getText;
+ * -(OFString**)getText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getText;
+-(OFString*)getText;
 
 /**
  * -(BOOL*)getTrackVisitedLinks;
@@ -257,11 +257,11 @@
 -(void)setJustify:(GtkJustification) jtype;
 
 /**
- * -(void*)setLabel:(NSString*) str;
+ * -(void*)setLabel:(OFString*) str;
  *
  * @param str
  */
--(void)setLabel:(NSString*) str;
+-(void)setLabel:(OFString*) str;
 
 /**
  * -(void*)setLineWrap:(BOOL) wrap;
@@ -285,18 +285,18 @@
 -(void)setLines:(gint) lines;
 
 /**
- * -(void*)setMarkup:(NSString*) str;
+ * -(void*)setMarkup:(OFString*) str;
  *
  * @param str
  */
--(void)setMarkup:(NSString*) str;
+-(void)setMarkup:(OFString*) str;
 
 /**
- * -(void*)setMarkupWithMnemonic:(NSString*) str;
+ * -(void*)setMarkupWithMnemonic:(OFString*) str;
  *
  * @param str
  */
--(void)setMarkupWithMnemonic:(NSString*) str;
+-(void)setMarkupWithMnemonic:(OFString*) str;
 
 /**
  * -(void*)setMaxWidthChars:(gint) nchars;
@@ -313,11 +313,11 @@
 -(void)setMnemonicWidget:(CGTKWidget*) widget;
 
 /**
- * -(void*)setPattern:(NSString*) pattern;
+ * -(void*)setPattern:(OFString*) pattern;
  *
  * @param pattern
  */
--(void)setPattern:(NSString*) pattern;
+-(void)setPattern:(OFString*) pattern;
 
 /**
  * -(void*)setSelectable:(BOOL) setting;
@@ -334,18 +334,18 @@
 -(void)setSingleLineMode:(BOOL) singleLineMode;
 
 /**
- * -(void*)setText:(NSString*) str;
+ * -(void*)setText:(OFString*) str;
  *
  * @param str
  */
--(void)setText:(NSString*) str;
+-(void)setText:(OFString*) str;
 
 /**
- * -(void*)setTextWithMnemonic:(NSString*) str;
+ * -(void*)setTextWithMnemonic:(OFString*) str;
  *
  * @param str
  */
--(void)setTextWithMnemonic:(NSString*) str;
+-(void)setTextWithMnemonic:(OFString*) str;
 
 /**
  * -(void*)setTrackVisitedLinks:(BOOL) trackLinks;

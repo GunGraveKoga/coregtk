@@ -33,7 +33,7 @@
 
 @implementation CGTKRecentChooserDialog
 
--(id)initForManagerWithTitle:(NSString *)title andParent:(CGTKWindow *)parent andManager:(GtkRecentManager*)manager andButtonTextResponseDictionary:(NSDictionary *)buttonTextDict
+-(id)initForManagerWithTitle:(OFString *)title andParent:(CGTKWindow *)parent andManager:(GtkRecentManager*)manager andButtonTextResponseDictionary:(OFDictionary *)buttonTextDict
 {
 	self = [super initWithGObject:(GObject *)gtk_recent_chooser_dialog_new_for_manager([title UTF8String], [parent WINDOW], manager, NULL, NULL)];
 
@@ -41,7 +41,7 @@
 	{
 		CGTKTypeWrapper *wrapper;
 		
-		for(NSString *text in buttonTextDict)
+		for(OFString *text in buttonTextDict)
 		{
 			wrapper = [buttonTextDict objectForKey:text];
 			
@@ -52,7 +52,7 @@
 	return self;
 }
 
--(id)initWithTitle:(NSString *)title andParent:(CGTKWindow *)parent andButtonTextResponseDictionary:(NSDictionary *)buttonTextDict
+-(id)initWithTitle:(OFString *)title andParent:(CGTKWindow *)parent andButtonTextResponseDictionary:(OFDictionary *)buttonTextDict
 {
 	self = [super initWithGObject:(GObject *)gtk_recent_chooser_dialog_new([title UTF8String], [parent WINDOW], NULL, NULL)];
 
@@ -60,7 +60,7 @@
 	{
 		CGTKTypeWrapper *wrapper;
 		
-		for(NSString *text in buttonTextDict)
+		for(OFString *text in buttonTextDict)
 		{
 			wrapper = [buttonTextDict objectForKey:text];
 			

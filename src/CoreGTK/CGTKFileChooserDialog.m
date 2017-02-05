@@ -33,7 +33,7 @@
 
 @implementation CGTKFileChooserDialog
 
--(id)initWithTitle:(NSString *)title andParent:(CGTKWindow *)parent andAction:(GtkFileChooserAction)action andButtonTextResponseDictionary:(NSDictionary *)buttonTextDict
+-(id)initWithTitle:(OFString *)title andParent:(CGTKWindow *)parent andAction:(GtkFileChooserAction)action andButtonTextResponseDictionary:(OFDictionary *)buttonTextDict
 {
 	self = [super initWithGObject:(GObject *)gtk_file_chooser_dialog_new([title UTF8String], [parent WINDOW], action, NULL, NULL)];
 
@@ -41,7 +41,7 @@
 	{
 		CGTKTypeWrapper *wrapper;
 		
-		for(NSString *text in buttonTextDict)
+		for(OFString *text in buttonTextDict)
 		{
 			wrapper = [buttonTextDict objectForKey:text];
 			

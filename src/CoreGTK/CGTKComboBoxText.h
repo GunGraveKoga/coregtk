@@ -50,58 +50,58 @@
 -(GtkComboBoxText*)COMBOBOXTEXT;
 
 /**
- * -(void*)appendWithId:(NSString*) id andText:(NSString*) text;
+ * -(void*)appendWithId:(OFString*) id andText:(OFString*) text;
  *
  * @param id
  * @param text
  */
--(void)appendWithId:(NSString*) id andText:(NSString*) text;
+-(void)appendWithId:(OFString*) id andText:(OFString*) text;
 
 /**
- * -(void*)appendText:(NSString*) text;
+ * -(void*)appendText:(OFString*) text;
  *
  * @param text
  */
--(void)appendText:(NSString*) text;
+-(void)appendText:(OFString*) text;
 
 /**
- * -(NSString**)getActiveText;
+ * -(OFString**)getActiveText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getActiveText;
+-(OFString*)getActiveText;
 
 /**
- * -(void*)insertWithPosition:(gint) position andId:(NSString*) id andText:(NSString*) text;
+ * -(void*)insertWithPosition:(gint) position andId:(OFString*) id andText:(OFString*) text;
  *
  * @param position
  * @param id
  * @param text
  */
--(void)insertWithPosition:(gint) position andId:(NSString*) id andText:(NSString*) text;
+-(void)insertWithPosition:(gint) position andId:(OFString*) id andText:(OFString*) text;
 
 /**
- * -(void*)insertTextWithPosition:(gint) position andText:(NSString*) text;
+ * -(void*)insertTextWithPosition:(gint) position andText:(OFString*) text;
  *
  * @param position
  * @param text
  */
--(void)insertTextWithPosition:(gint) position andText:(NSString*) text;
+-(void)insertTextWithPosition:(gint) position andText:(OFString*) text;
 
 /**
- * -(void*)prependWithId:(NSString*) id andText:(NSString*) text;
+ * -(void*)prependWithId:(OFString*) id andText:(OFString*) text;
  *
  * @param id
  * @param text
  */
--(void)prependWithId:(NSString*) id andText:(NSString*) text;
+-(void)prependWithId:(OFString*) id andText:(OFString*) text;
 
 /**
- * -(void*)prependText:(NSString*) text;
+ * -(void*)prependText:(OFString*) text;
  *
  * @param text
  */
--(void)prependText:(NSString*) text;
+-(void)prependText:(OFString*) text;
 
 /**
  * -(void*)remove:(gint) position;

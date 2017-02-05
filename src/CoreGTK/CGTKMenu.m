@@ -87,9 +87,9 @@
 	return gtk_menu_get_accel_group(GTK_MENU([self GOBJECT]));
 }
 
--(NSString*)getAccelPath
+-(OFString*)getAccelPath
 {
-	return [NSString stringWithUTF8String:gtk_menu_get_accel_path(GTK_MENU([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_menu_get_accel_path(GTK_MENU([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getActive
@@ -117,9 +117,9 @@
 	return (gtk_menu_get_tearoff_state(GTK_MENU([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_menu_get_title(GTK_MENU([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_menu_get_title(GTK_MENU([self GOBJECT]))];
 }
 
 -(void)popdown
@@ -152,7 +152,7 @@
 	gtk_menu_set_accel_group(GTK_MENU([self GOBJECT]), accelGroup);
 }
 
--(void)setAccelPath:(NSString*) accelPath
+-(void)setAccelPath:(OFString*) accelPath
 {
 	gtk_menu_set_accel_path(GTK_MENU([self GOBJECT]), [accelPath UTF8String]);
 }
@@ -182,7 +182,7 @@
 	gtk_menu_set_tearoff_state(GTK_MENU([self GOBJECT]), (tornOff ? TRUE : FALSE));
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_menu_set_title(GTK_MENU([self GOBJECT]), [title UTF8String]);
 }

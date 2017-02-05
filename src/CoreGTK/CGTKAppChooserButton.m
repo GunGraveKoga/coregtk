@@ -33,7 +33,7 @@
 
 @implementation CGTKAppChooserButton
 
--(id)init:(NSString*) contentType
+-(id)init:(OFString*) contentType
 {
 	self = [super initWithGObject:(GObject *)gtk_app_chooser_button_new([contentType UTF8String])];
 
@@ -50,7 +50,7 @@
 	return GTK_APP_CHOOSER_BUTTON([self GOBJECT]);
 }
 
--(void)appendCustomItemWithName:(NSString*) name andLabel:(NSString*) label andIcon:(GIcon*) icon
+-(void)appendCustomItemWithName:(OFString*) name andLabel:(OFString*) label andIcon:(GIcon*) icon
 {
 	gtk_app_chooser_button_append_custom_item(GTK_APP_CHOOSER_BUTTON([self GOBJECT]), [name UTF8String], [label UTF8String], icon);
 }
@@ -60,9 +60,9 @@
 	gtk_app_chooser_button_append_separator(GTK_APP_CHOOSER_BUTTON([self GOBJECT]));
 }
 
--(NSString*)getHeading
+-(OFString*)getHeading
 {
-	return [NSString stringWithUTF8String:gtk_app_chooser_button_get_heading(GTK_APP_CHOOSER_BUTTON([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_app_chooser_button_get_heading(GTK_APP_CHOOSER_BUTTON([self GOBJECT]))];
 }
 
 -(BOOL)getShowDefaultItem
@@ -75,12 +75,12 @@
 	return (gtk_app_chooser_button_get_show_dialog_item(GTK_APP_CHOOSER_BUTTON([self GOBJECT])) ? YES : NO);
 }
 
--(void)setActiveCustomItem:(NSString*) name
+-(void)setActiveCustomItem:(OFString*) name
 {
 	gtk_app_chooser_button_set_active_custom_item(GTK_APP_CHOOSER_BUTTON([self GOBJECT]), [name UTF8String]);
 }
 
--(void)setHeading:(NSString*) heading
+-(void)setHeading:(OFString*) heading
 {
 	gtk_app_chooser_button_set_heading(GTK_APP_CHOOSER_BUTTON([self GOBJECT]), [heading UTF8String]);
 }

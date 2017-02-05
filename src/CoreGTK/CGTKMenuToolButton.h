@@ -40,8 +40,8 @@
 /**
  * Constructors
  */
--(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(NSString*) label;
--(id)initFromStock:(NSString*) stockId;
+-(id)initWithIconWidget:(CGTKWidget*) iconWidget andLabel:(OFString*) label;
+-(id)initFromStock:(OFString*) stockId;
 
 /**
  * Methods
@@ -57,18 +57,18 @@
 -(CGTKWidget*)getMenu;
 
 /**
- * -(void*)setArrowTooltipMarkup:(NSString*) markup;
+ * -(void*)setArrowTooltipMarkup:(OFString*) markup;
  *
  * @param markup
  */
--(void)setArrowTooltipMarkup:(NSString*) markup;
+-(void)setArrowTooltipMarkup:(OFString*) markup;
 
 /**
- * -(void*)setArrowTooltipText:(NSString*) text;
+ * -(void*)setArrowTooltipText:(OFString*) text;
  *
  * @param text
  */
--(void)setArrowTooltipText:(NSString*) text;
+-(void)setArrowTooltipText:(OFString*) text;
 
 /**
  * -(void*)setMenu:(CGTKWidget*) menu;

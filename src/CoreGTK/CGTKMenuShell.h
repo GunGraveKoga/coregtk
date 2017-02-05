@@ -59,13 +59,13 @@
 -(void)append:(CGTKWidget*) child;
 
 /**
- * -(void*)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace andWithSeparators:(BOOL) withSeparators;
+ * -(void*)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace andWithSeparators:(BOOL) withSeparators;
  *
  * @param model
  * @param actionNamespace
  * @param withSeparators
  */
--(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace andWithSeparators:(BOOL) withSeparators;
+-(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace andWithSeparators:(BOOL) withSeparators;
 
 /**
  * -(void*)cancel;

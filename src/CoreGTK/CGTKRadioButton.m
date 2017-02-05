@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initWithLabelWithGroup:(GSList*) group andLabel:(NSString*) label
+-(id)initWithLabelWithGroup:(GSList*) group andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_button_new_with_label(group, [label UTF8String])];
 
@@ -69,7 +69,7 @@
 	return self;
 }
 
--(id)initWithLabelFromWidgetWithRadioGroupMember:(GtkRadioButton*) radioGroupMember andLabel:(NSString*) label
+-(id)initWithLabelFromWidgetWithRadioGroupMember:(GtkRadioButton*) radioGroupMember andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_button_new_with_label_from_widget(radioGroupMember, [label UTF8String])];
 
@@ -81,7 +81,7 @@
 	return self;
 }
 
--(id)initWithMnemonicWithGroup:(GSList*) group andLabel:(NSString*) label
+-(id)initWithMnemonicWithGroup:(GSList*) group andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_button_new_with_mnemonic(group, [label UTF8String])];
 
@@ -93,7 +93,7 @@
 	return self;
 }
 
--(id)initWithMnemonicFromWidgetWithRadioGroupMember:(GtkRadioButton*) radioGroupMember andLabel:(NSString*) label
+-(id)initWithMnemonicFromWidgetWithRadioGroupMember:(GtkRadioButton*) radioGroupMember andLabel:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_radio_button_new_with_mnemonic_from_widget(radioGroupMember, [label UTF8String])];
 

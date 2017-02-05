@@ -61,11 +61,11 @@
 -(gint)getActive;
 
 /**
- * -(NSString**)getActiveId;
+ * -(OFString**)getActiveId;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getActiveId;
+-(OFString*)getActiveId;
 
 /**
  * -(BOOL*)getActiveIter:(GtkTreeIter*) iter;
@@ -160,11 +160,11 @@
 -(gint)getRowSpanColumn;
 
 /**
- * -(NSString**)getTitle;
+ * -(OFString**)getTitle;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTitle;
+-(OFString*)getTitle;
 
 /**
  * -(gint*)getWrapWidth;
@@ -200,12 +200,12 @@
 -(void)setActive:(gint) index;
 
 /**
- * -(BOOL*)setActiveId:(NSString*) activeId;
+ * -(BOOL*)setActiveId:(OFString*) activeId;
  *
  * @param activeId
  * @returns BOOL
  */
--(BOOL)setActiveId:(NSString*) activeId;
+-(BOOL)setActiveId:(OFString*) activeId;
 
 /**
  * -(void*)setActiveIter:(GtkTreeIter*) iter;
@@ -287,11 +287,11 @@
 -(void)setRowSpanColumn:(gint) rowSpan;
 
 /**
- * -(void*)setTitle:(NSString*) title;
+ * -(void*)setTitle:(OFString*) title;
  *
  * @param title
  */
--(void)setTitle:(NSString*) title;
+-(void)setTitle:(OFString*) title;
 
 /**
  * -(void*)setWrapWidth:(gint) width;

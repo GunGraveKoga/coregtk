@@ -77,11 +77,11 @@
 -(CGTKWidget*)getFamilyList;
 
 /**
- * -(NSString**)getFontName;
+ * -(OFString**)getFontName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getFontName;
+-(OFString*)getFontName;
 
 /**
  * -(CGTKWidget**)getPreviewEntry;
@@ -91,11 +91,11 @@
 -(CGTKWidget*)getPreviewEntry;
 
 /**
- * -(NSString**)getPreviewText;
+ * -(OFString**)getPreviewText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getPreviewText;
+-(OFString*)getPreviewText;
 
 /**
  * -(gint*)getSize;
@@ -119,18 +119,18 @@
 -(CGTKWidget*)getSizeList;
 
 /**
- * -(BOOL*)setFontName:(NSString*) fontname;
+ * -(BOOL*)setFontName:(OFString*) fontname;
  *
  * @param fontname
  * @returns BOOL
  */
--(BOOL)setFontName:(NSString*) fontname;
+-(BOOL)setFontName:(OFString*) fontname;
 
 /**
- * -(void*)setPreviewText:(NSString*) text;
+ * -(void*)setPreviewText:(OFString*) text;
  *
  * @param text
  */
--(void)setPreviewText:(NSString*) text;
+-(void)setPreviewText:(OFString*) text;
 
 @end

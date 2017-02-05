@@ -38,9 +38,9 @@
 	return gtk_window_get_default_icon_list();
 }
 
-+(NSString*)getDefaultIconName
++(OFString*)getDefaultIconName
 {
-	return [NSString stringWithUTF8String:gtk_window_get_default_icon_name()];
+	return [OFString stringWithUTF8String:gtk_window_get_default_icon_name()];
 }
 
 +(GList*)listToplevels
@@ -58,7 +58,7 @@
 	gtk_window_set_default_icon(icon);
 }
 
-+(BOOL)setDefaultIconFromFileWithFilename:(NSString*) filename andErr:(GError**) err
++(BOOL)setDefaultIconFromFileWithFilename:(OFString*) filename andErr:(GError**) err
 {
 	return (gtk_window_set_default_icon_from_file([filename UTF8String], err) ? YES : NO);
 }
@@ -68,7 +68,7 @@
 	gtk_window_set_default_icon_list(list);
 }
 
-+(void)setDefaultIconName:(NSString*) name
++(void)setDefaultIconName:(OFString*) name
 {
 	gtk_window_set_default_icon_name([name UTF8String]);
 }
@@ -235,9 +235,9 @@
 	return gtk_window_get_icon_list(GTK_WINDOW([self GOBJECT]));
 }
 
--(NSString*)getIconName
+-(OFString*)getIconName
 {
-	return [NSString stringWithUTF8String:gtk_window_get_icon_name(GTK_WINDOW([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_window_get_icon_name(GTK_WINDOW([self GOBJECT]))];
 }
 
 -(GdkModifierType)getMnemonicModifier
@@ -275,9 +275,9 @@
 	return (gtk_window_get_resize_grip_area(GTK_WINDOW([self GOBJECT]), rect) ? YES : NO);
 }
 
--(NSString*)getRole
+-(OFString*)getRole
 {
-	return [NSString stringWithUTF8String:gtk_window_get_role(GTK_WINDOW([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_window_get_role(GTK_WINDOW([self GOBJECT]))];
 }
 
 -(GdkScreen*)getScreen
@@ -300,9 +300,9 @@
 	return (gtk_window_get_skip_taskbar_hint(GTK_WINDOW([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getTitle
+-(OFString*)getTitle
 {
-	return [NSString stringWithUTF8String:gtk_window_get_title(GTK_WINDOW([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_window_get_title(GTK_WINDOW([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getTitlebar
@@ -370,7 +370,7 @@
 	gtk_window_move(GTK_WINDOW([self GOBJECT]), x, y);
 }
 
--(BOOL)parseGeometry:(NSString*) geometry
+-(BOOL)parseGeometry:(OFString*) geometry
 {
 	return (gtk_window_parse_geometry(GTK_WINDOW([self GOBJECT]), [geometry UTF8String]) ? YES : NO);
 }
@@ -510,7 +510,7 @@
 	gtk_window_set_icon(GTK_WINDOW([self GOBJECT]), icon);
 }
 
--(BOOL)setIconFromFileWithFilename:(NSString*) filename andErr:(GError**) err
+-(BOOL)setIconFromFileWithFilename:(OFString*) filename andErr:(GError**) err
 {
 	return (gtk_window_set_icon_from_file(GTK_WINDOW([self GOBJECT]), [filename UTF8String], err) ? YES : NO);
 }
@@ -520,7 +520,7 @@
 	gtk_window_set_icon_list(GTK_WINDOW([self GOBJECT]), list);
 }
 
--(void)setIconName:(NSString*) name
+-(void)setIconName:(OFString*) name
 {
 	gtk_window_set_icon_name(GTK_WINDOW([self GOBJECT]), [name UTF8String]);
 }
@@ -565,7 +565,7 @@
 	gtk_window_set_resizable(GTK_WINDOW([self GOBJECT]), (resizable ? TRUE : FALSE));
 }
 
--(void)setRole:(NSString*) role
+-(void)setRole:(OFString*) role
 {
 	gtk_window_set_role(GTK_WINDOW([self GOBJECT]), [role UTF8String]);
 }
@@ -585,12 +585,12 @@
 	gtk_window_set_skip_taskbar_hint(GTK_WINDOW([self GOBJECT]), (setting ? TRUE : FALSE));
 }
 
--(void)setStartupId:(NSString*) startupId
+-(void)setStartupId:(OFString*) startupId
 {
 	gtk_window_set_startup_id(GTK_WINDOW([self GOBJECT]), [startupId UTF8String]);
 }
 
--(void)setTitle:(NSString*) title
+-(void)setTitle:(OFString*) title
 {
 	gtk_window_set_title(GTK_WINDOW([self GOBJECT]), [title UTF8String]);
 }
@@ -615,7 +615,7 @@
 	gtk_window_set_urgency_hint(GTK_WINDOW([self GOBJECT]), (setting ? TRUE : FALSE));
 }
 
--(void)setWmclassWithWmclassName:(NSString*) wmclassName andWmclassClass:(NSString*) wmclassClass
+-(void)setWmclassWithWmclassName:(OFString*) wmclassName andWmclassClass:(OFString*) wmclassClass
 {
 	gtk_window_set_wmclass(GTK_WINDOW([self GOBJECT]), [wmclassName UTF8String], [wmclassClass UTF8String]);
 }

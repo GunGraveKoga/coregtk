@@ -50,12 +50,12 @@
 -(GtkLevelBar*)LEVELBAR;
 
 /**
- * -(void*)addOffsetValueWithName:(NSString*) name andValue:(gdouble) value;
+ * -(void*)addOffsetValueWithName:(OFString*) name andValue:(gdouble) value;
  *
  * @param name
  * @param value
  */
--(void)addOffsetValueWithName:(NSString*) name andValue:(gdouble) value;
+-(void)addOffsetValueWithName:(OFString*) name andValue:(gdouble) value;
 
 /**
  * -(BOOL*)getInverted;
@@ -86,13 +86,13 @@
 -(GtkLevelBarMode)getMode;
 
 /**
- * -(BOOL*)getOffsetValueWithName:(NSString*) name andValue:(gdouble*) value;
+ * -(BOOL*)getOffsetValueWithName:(OFString*) name andValue:(gdouble*) value;
  *
  * @param name
  * @param value
  * @returns BOOL
  */
--(BOOL)getOffsetValueWithName:(NSString*) name andValue:(gdouble*) value;
+-(BOOL)getOffsetValueWithName:(OFString*) name andValue:(gdouble*) value;
 
 /**
  * -(gdouble*)getValue;
@@ -102,11 +102,11 @@
 -(gdouble)getValue;
 
 /**
- * -(void*)removeOffsetValue:(NSString*) name;
+ * -(void*)removeOffsetValue:(OFString*) name;
  *
  * @param name
  */
--(void)removeOffsetValue:(NSString*) name;
+-(void)removeOffsetValue:(OFString*) name;
 
 /**
  * -(void*)setInverted:(BOOL) inverted;

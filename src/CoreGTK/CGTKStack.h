@@ -49,29 +49,29 @@
 -(GtkStack*)STACK;
 
 /**
- * -(void*)addNamedWithChild:(CGTKWidget*) child andName:(NSString*) name;
+ * -(void*)addNamedWithChild:(CGTKWidget*) child andName:(OFString*) name;
  *
  * @param child
  * @param name
  */
--(void)addNamedWithChild:(CGTKWidget*) child andName:(NSString*) name;
+-(void)addNamedWithChild:(CGTKWidget*) child andName:(OFString*) name;
 
 /**
- * -(void*)addTitledWithChild:(CGTKWidget*) child andName:(NSString*) name andTitle:(NSString*) title;
+ * -(void*)addTitledWithChild:(CGTKWidget*) child andName:(OFString*) name andTitle:(OFString*) title;
  *
  * @param child
  * @param name
  * @param title
  */
--(void)addTitledWithChild:(CGTKWidget*) child andName:(NSString*) name andTitle:(NSString*) title;
+-(void)addTitledWithChild:(CGTKWidget*) child andName:(OFString*) name andTitle:(OFString*) title;
 
 /**
- * -(CGTKWidget**)getChildByName:(NSString*) name;
+ * -(CGTKWidget**)getChildByName:(OFString*) name;
  *
  * @param name
  * @returns CGTKWidget*
  */
--(CGTKWidget*)getChildByName:(NSString*) name;
+-(CGTKWidget*)getChildByName:(OFString*) name;
 
 /**
  * -(BOOL*)getHhomogeneous;
@@ -130,11 +130,11 @@
 -(CGTKWidget*)getVisibleChild;
 
 /**
- * -(NSString**)getVisibleChildName;
+ * -(OFString**)getVisibleChildName;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getVisibleChildName;
+-(OFString*)getVisibleChildName;
 
 /**
  * -(void*)setHhomogeneous:(BOOL) hhomogeneous;
@@ -186,18 +186,18 @@
 -(void)setVisibleChild:(CGTKWidget*) child;
 
 /**
- * -(void*)setVisibleChildFullWithName:(NSString*) name andTransition:(GtkStackTransitionType) transition;
+ * -(void*)setVisibleChildFullWithName:(OFString*) name andTransition:(GtkStackTransitionType) transition;
  *
  * @param name
  * @param transition
  */
--(void)setVisibleChildFullWithName:(NSString*) name andTransition:(GtkStackTransitionType) transition;
+-(void)setVisibleChildFullWithName:(OFString*) name andTransition:(GtkStackTransitionType) transition;
 
 /**
- * -(void*)setVisibleChildName:(NSString*) name;
+ * -(void*)setVisibleChildName:(OFString*) name;
  *
  * @param name
  */
--(void)setVisibleChildName:(NSString*) name;
+-(void)setVisibleChildName:(OFString*) name;
 
 @end

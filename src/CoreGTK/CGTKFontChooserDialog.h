@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)initWithTitle:(NSString*) title andParent:(GtkWindow*) parent;
+-(id)initWithTitle:(OFString*) title andParent:(GtkWindow*) parent;
 
 /**
  * Methods

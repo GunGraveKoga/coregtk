@@ -33,7 +33,7 @@
 
 @implementation CGTKFontSelectionDialog
 
--(id)init:(NSString*) title
+-(id)init:(OFString*) title
 {
 	self = [super initWithGObject:(GObject *)gtk_font_selection_dialog_new([title UTF8String])];
 
@@ -55,9 +55,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_font_selection_dialog_get_cancel_button(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
 }
 
--(NSString*)getFontName
+-(OFString*)getFontName
 {
-	return [NSString stringWithUTF8String:gtk_font_selection_dialog_get_font_name(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_selection_dialog_get_font_name(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getFontSelection
@@ -70,17 +70,17 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_font_selection_dialog_get_ok_button(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
 }
 
--(NSString*)getPreviewText
+-(OFString*)getPreviewText
 {
-	return [NSString stringWithUTF8String:gtk_font_selection_dialog_get_preview_text(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_font_selection_dialog_get_preview_text(GTK_FONT_SELECTION_DIALOG([self GOBJECT]))];
 }
 
--(BOOL)setFontName:(NSString*) fontname
+-(BOOL)setFontName:(OFString*) fontname
 {
 	return (gtk_font_selection_dialog_set_font_name(GTK_FONT_SELECTION_DIALOG([self GOBJECT]), [fontname UTF8String]) ? YES : NO);
 }
 
--(void)setPreviewText:(NSString*) text
+-(void)setPreviewText:(OFString*) text
 {
 	gtk_font_selection_dialog_set_preview_text(GTK_FONT_SELECTION_DIALOG([self GOBJECT]), [text UTF8String]);
 }

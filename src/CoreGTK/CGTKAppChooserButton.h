@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) contentType;
+-(id)init:(OFString*) contentType;
 
 /**
  * Methods
@@ -49,13 +49,13 @@
 -(GtkAppChooserButton*)APPCHOOSERBUTTON;
 
 /**
- * -(void*)appendCustomItemWithName:(NSString*) name andLabel:(NSString*) label andIcon:(GIcon*) icon;
+ * -(void*)appendCustomItemWithName:(OFString*) name andLabel:(OFString*) label andIcon:(GIcon*) icon;
  *
  * @param name
  * @param label
  * @param icon
  */
--(void)appendCustomItemWithName:(NSString*) name andLabel:(NSString*) label andIcon:(GIcon*) icon;
+-(void)appendCustomItemWithName:(OFString*) name andLabel:(OFString*) label andIcon:(GIcon*) icon;
 
 /**
  * -(void*)appendSeparator;
@@ -64,11 +64,11 @@
 -(void)appendSeparator;
 
 /**
- * -(NSString**)getHeading;
+ * -(OFString**)getHeading;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getHeading;
+-(OFString*)getHeading;
 
 /**
  * -(BOOL*)getShowDefaultItem;
@@ -85,18 +85,18 @@
 -(BOOL)getShowDialogItem;
 
 /**
- * -(void*)setActiveCustomItem:(NSString*) name;
+ * -(void*)setActiveCustomItem:(OFString*) name;
  *
  * @param name
  */
--(void)setActiveCustomItem:(NSString*) name;
+-(void)setActiveCustomItem:(OFString*) name;
 
 /**
- * -(void*)setHeading:(NSString*) heading;
+ * -(void*)setHeading:(OFString*) heading;
  *
  * @param heading
  */
--(void)setHeading:(NSString*) heading;
+-(void)setHeading:(OFString*) heading;
 
 /**
  * -(void*)setShowDefaultItem:(BOOL) setting;

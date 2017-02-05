@@ -50,12 +50,12 @@
 -(GtkPopover*)POPOVER;
 
 /**
- * -(void*)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace;
+ * -(void*)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace;
  *
  * @param model
  * @param actionNamespace
  */
--(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace;
+-(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace;
 
 /**
  * -(CGTKWidget**)getDefaultWidget;

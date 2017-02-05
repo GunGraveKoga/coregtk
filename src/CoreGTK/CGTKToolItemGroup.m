@@ -33,7 +33,7 @@
 
 @implementation CGTKToolItemGroup
 
--(id)init:(NSString*) label
+-(id)init:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_tool_item_group_new([label UTF8String])];
 
@@ -75,9 +75,9 @@
 	return gtk_tool_item_group_get_item_position(GTK_TOOL_ITEM_GROUP([self GOBJECT]), item);
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_tool_item_group_get_label(GTK_TOOL_ITEM_GROUP([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_tool_item_group_get_label(GTK_TOOL_ITEM_GROUP([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getLabelWidget
@@ -120,7 +120,7 @@
 	gtk_tool_item_group_set_item_position(GTK_TOOL_ITEM_GROUP([self GOBJECT]), item, position);
 }
 
--(void)setLabel:(NSString*) label
+-(void)setLabel:(OFString*) label
 {
 	gtk_tool_item_group_set_label(GTK_TOOL_ITEM_GROUP([self GOBJECT]), [label UTF8String]);
 }

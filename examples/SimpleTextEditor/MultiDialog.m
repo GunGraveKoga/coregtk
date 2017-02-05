@@ -26,96 +26,94 @@
 
 @implementation MultiDialog
 
-+(NSString *)presentOpenDialog
-{
-	// Variables
-	CGTKFileChooserDialog *dialog = nil;
-	gchar *gText = NULL;
-	gint result;
-	NSString *filename = nil;
-	
-	// Add cancel and open buttons
-	CGTKTypeWrapper *btnCancel = [[CGTKTypeWrapper alloc] init];
-	btnCancel.gintValue = GTK_RESPONSE_CANCEL;
-	
-	CGTKTypeWrapper *btnOpen = [[CGTKTypeWrapper alloc] init];
-	btnOpen.gintValue = GTK_RESPONSE_ACCEPT;
-	
-	NSDictionary *buttonTextDict = [NSDictionary dictionaryWithObjectsAndKeys:
-		btnCancel, @"_Cancel",
-		btnOpen, @"_Open",
-		nil];
-		
-	// Create the dialog itself
-	dialog = [[CGTKFileChooserDialog alloc] initWithTitle:@"Open File" andParent:nil andAction:GTK_FILE_CHOOSER_ACTION_OPEN andButtonTextResponseDictionary:buttonTextDict];
-	
-	// Run the dialog
-	result = gtk_dialog_run (GTK_DIALOG ([dialog WIDGET]));
++ (OFString *) presentOpenDialog {
+    // Variables
+    CGTKFileChooserDialog * dialog = nil;
+    gchar * gText = NULL;
+    gint result;
+    OFString * filename = nil;
 
-	// If the user clicked Open
-	if(result == GTK_RESPONSE_ACCEPT)
-	{
-		// Extract the filename and convert it to an NSString
-		gText = gtk_file_chooser_get_filename ([dialog FILECHOOSERDIALOG]);
-		filename = [NSString stringWithUTF8String:gText];
-	}
+    // Add cancel and open buttons
+    CGTKTypeWrapper * btnCancel = [[CGTKTypeWrapper alloc] init];
 
-	// Cleanup
-	g_free(gText);
-	gtk_widget_destroy ([dialog WIDGET]);
-	[dialog release];
-	[btnCancel release];
-	[btnOpen release];
-	
-	return filename;
-}
+    btnCancel.gintValue = GTK_RESPONSE_CANCEL;
 
-+(NSString *)presentSaveDialog
-{
-	// Variables
-	CGTKFileChooserDialog *dialog = nil;
-	gchar *gText = NULL;
-	gint result;
-	NSString *filename = nil;
+    CGTKTypeWrapper * btnOpen = [[CGTKTypeWrapper alloc] init];
+    btnOpen.gintValue = GTK_RESPONSE_ACCEPT;
 
-	// Add cancel and save buttons
-	CGTKTypeWrapper *btnCancel = [[CGTKTypeWrapper alloc] init];
-	btnCancel.gintValue = GTK_RESPONSE_CANCEL;
-	
-	CGTKTypeWrapper *btnSave = [[CGTKTypeWrapper alloc] init];
-	btnSave.gintValue = GTK_RESPONSE_ACCEPT;
-	
-	NSDictionary *buttonTextDict = [NSDictionary dictionaryWithObjectsAndKeys:
-		btnCancel, @"_Cancel",
-		btnSave, @"_Save",
-		nil];
-		
-	// Create the dialog itself
-	dialog = [[CGTKFileChooserDialog alloc] initWithTitle:@"Save File" andParent:nil andAction:GTK_FILE_CHOOSER_ACTION_SAVE andButtonTextResponseDictionary:buttonTextDict];
+    OFDictionary * buttonTextDict = [OFDictionary dictionaryWithKeysAndObjects:
+                                     @"_Cancel", btnCancel,
+                                     @"_Open", btnOpen,
+                                     nil];
 
-	// Set settings
-	gtk_file_chooser_set_do_overwrite_confirmation ([dialog FILECHOOSERDIALOG], TRUE);
-	gtk_file_chooser_set_current_name([dialog FILECHOOSERDIALOG], "Untitled document");
-	
-	// Run the dialog
-	result = gtk_dialog_run (GTK_DIALOG ([dialog WIDGET]));
+    // Create the dialog itself
+    dialog = [[CGTKFileChooserDialog alloc] initWithTitle:@"Open File" andParent:nil andAction:GTK_FILE_CHOOSER_ACTION_OPEN andButtonTextResponseDictionary:buttonTextDict];
 
-	// If the user clicked Save
-	if(result == GTK_RESPONSE_ACCEPT)
-	{
-		// Extract the filename and convert it to an NSString
-		gText = gtk_file_chooser_get_filename ([dialog FILECHOOSERDIALOG]);
-		filename = [NSString stringWithUTF8String:gText];
-	}
+    // Run the dialog
+    result = gtk_dialog_run(GTK_DIALOG([dialog WIDGET]));
 
-	// Cleanup
-	g_free(gText);
-	gtk_widget_destroy ([dialog WIDGET]);
-	[dialog release];
-	[btnCancel release];
-	[btnSave release];
-	
-	return filename;
-}
+    // If the user clicked Open
+    if (result == GTK_RESPONSE_ACCEPT) {
+        // Extract the filename and convert it to an OFString
+        gText = gtk_file_chooser_get_filename([dialog FILECHOOSERDIALOG]);
+        filename = [OFString stringWithUTF8String:gText];
+    }
+
+    // Cleanup
+    g_free(gText);
+    gtk_widget_destroy([dialog WIDGET]);
+    [dialog release];
+    [btnCancel release];
+    [btnOpen release];
+
+    return filename;
+} /* presentOpenDialog */
+
++ (OFString *) presentSaveDialog {
+    // Variables
+    CGTKFileChooserDialog * dialog = nil;
+    gchar * gText = NULL;
+    gint result;
+    OFString * filename = nil;
+
+    // Add cancel and save buttons
+    CGTKTypeWrapper * btnCancel = [[CGTKTypeWrapper alloc] init];
+
+    btnCancel.gintValue = GTK_RESPONSE_CANCEL;
+
+    CGTKTypeWrapper * btnSave = [[CGTKTypeWrapper alloc] init];
+    btnSave.gintValue = GTK_RESPONSE_ACCEPT;
+
+    OFDictionary * buttonTextDict = [OFDictionary dictionaryWithKeysAndObjects:
+                                     @"_Cancel", btnCancel,
+                                     @"_Save", btnSave,
+                                     nil];
+
+    // Create the dialog itself
+    dialog = [[CGTKFileChooserDialog alloc] initWithTitle:@"Save File" andParent:nil andAction:GTK_FILE_CHOOSER_ACTION_SAVE andButtonTextResponseDictionary:buttonTextDict];
+
+    // Set settings
+    gtk_file_chooser_set_do_overwrite_confirmation([dialog FILECHOOSERDIALOG], TRUE);
+    gtk_file_chooser_set_current_name([dialog FILECHOOSERDIALOG], "Untitled document");
+
+    // Run the dialog
+    result = gtk_dialog_run(GTK_DIALOG([dialog WIDGET]));
+
+    // If the user clicked Save
+    if (result == GTK_RESPONSE_ACCEPT) {
+        // Extract the filename and convert it to an OFString
+        gText = gtk_file_chooser_get_filename([dialog FILECHOOSERDIALOG]);
+        filename = [OFString stringWithUTF8String:gText];
+    }
+
+    // Cleanup
+    g_free(gText);
+    gtk_widget_destroy([dialog WIDGET]);
+    [dialog release];
+    [btnCancel release];
+    [btnSave release];
+
+    return filename;
+} /* presentSaveDialog */
 
 @end

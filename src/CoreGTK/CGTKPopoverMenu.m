@@ -50,7 +50,7 @@
 	return GTK_POPOVER_MENU([self GOBJECT]);
 }
 
--(void)openSubmenu:(NSString*) name
+-(void)openSubmenu:(OFString*) name
 {
 	gtk_popover_menu_open_submenu(GTK_POPOVER_MENU([self GOBJECT]), [name UTF8String]);
 }

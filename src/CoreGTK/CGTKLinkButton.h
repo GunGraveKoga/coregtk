@@ -40,8 +40,8 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) uri;
--(id)initWithLabelWithUri:(NSString*) uri andLabel:(NSString*) label;
+-(id)init:(OFString*) uri;
+-(id)initWithLabelWithUri:(OFString*) uri andLabel:(OFString*) label;
 
 /**
  * Methods
@@ -50,11 +50,11 @@
 -(GtkLinkButton*)LINKBUTTON;
 
 /**
- * -(NSString**)getUri;
+ * -(OFString**)getUri;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getUri;
+-(OFString*)getUri;
 
 /**
  * -(BOOL*)getVisited;
@@ -64,11 +64,11 @@
 -(BOOL)getVisited;
 
 /**
- * -(void*)setUri:(NSString*) uri;
+ * -(void*)setUri:(OFString*) uri;
  *
  * @param uri
  */
--(void)setUri:(NSString*) uri;
+-(void)setUri:(OFString*) uri;
 
 /**
  * -(void*)setVisited:(BOOL) visited;

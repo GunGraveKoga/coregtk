@@ -39,8 +39,8 @@
 /**
  * Functions
  */
-+(BOOL)paletteFromStringWithStr:(NSString*) str andColors:(GdkColor**) colors andNcolors:(gint*) ncolors;
-+(NSString*)paletteToStringWithColors:(GdkColor*) colors andNcolors:(gint) ncolors;
++(BOOL)paletteFromStringWithStr:(OFString*) str andColors:(GdkColor**) colors andNcolors:(gint*) ncolors;
++(OFString*)paletteToStringWithColors:(GdkColor*) colors andNcolors:(gint) ncolors;
 +(GtkColorSelectionChangePaletteWithScreenFunc)setChangePaletteWithScreenHook:(GtkColorSelectionChangePaletteWithScreenFunc) func;
 
 /**

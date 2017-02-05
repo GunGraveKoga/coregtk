@@ -50,13 +50,13 @@
 -(GtkScale*)SCALE;
 
 /**
- * -(void*)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(NSString*) markup;
+ * -(void*)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(OFString*) markup;
  *
  * @param value
  * @param position
  * @param markup
  */
--(void)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(NSString*) markup;
+-(void)addMarkWithValue:(gdouble) value andPosition:(GtkPositionType) position andMarkup:(OFString*) markup;
 
 /**
  * -(void*)clearMarks;

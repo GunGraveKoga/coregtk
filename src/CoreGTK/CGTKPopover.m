@@ -62,7 +62,7 @@
 	return GTK_POPOVER([self GOBJECT]);
 }
 
--(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace
+-(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace
 {
 	gtk_popover_bind_model(GTK_POPOVER([self GOBJECT]), model, [actionNamespace UTF8String]);
 }

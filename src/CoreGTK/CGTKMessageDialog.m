@@ -33,7 +33,7 @@
 
 @implementation CGTKMessageDialog
 
--(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMarkup:(NSString *)markup
+-(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMarkup:(OFString *)markup
 {
 	self = [super initWithGObject:(GObject *)gtk_message_dialog_new_with_markup([parent WINDOW], flags, type, buttons, [markup UTF8String], NULL)];
 
@@ -45,17 +45,17 @@
 	return self;
 }
 
--(void)formatSecondaryText:(NSString *)message
+-(void)formatSecondaryText:(OFString *)message
 {
 	gtk_message_dialog_format_secondary_text([self MESSAGEDIALOG], [message UTF8String], NULL);
 }
 
--(void)formatSecondaryMarkup:(NSString *)markup
+-(void)formatSecondaryMarkup:(OFString *)markup
 {
 	gtk_message_dialog_format_secondary_markup([self MESSAGEDIALOG], [markup UTF8String], NULL);
 }
 
--(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMessage:(NSString *)message
+-(id)initWithParent:(CGTKWindow *)parent andFlags:(GtkDialogFlags)flags andType:(GtkMessageType)type andButtons:(GtkButtonsType)buttons andMessage:(OFString *)message
 {
 	self = [super initWithGObject:(GObject *)gtk_message_dialog_new([parent WINDOW], flags, type, buttons, [message UTF8String], NULL)];
 
@@ -87,7 +87,7 @@
 	gtk_message_dialog_set_image(GTK_MESSAGE_DIALOG([self GOBJECT]), [image WIDGET]);
 }
 
--(void)setMarkup:(NSString*) str
+-(void)setMarkup:(OFString*) str
 {
 	gtk_message_dialog_set_markup(GTK_MESSAGE_DIALOG([self GOBJECT]), [str UTF8String]);
 }

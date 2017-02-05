@@ -75,9 +75,9 @@
 	return gtk_notebook_get_current_page(GTK_NOTEBOOK([self GOBJECT]));
 }
 
--(NSString*)getGroupName
+-(OFString*)getGroupName
 {
-	return [NSString stringWithUTF8String:gtk_notebook_get_group_name(GTK_NOTEBOOK([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_notebook_get_group_name(GTK_NOTEBOOK([self GOBJECT]))];
 }
 
 -(CGTKWidget*)getMenuLabel:(CGTKWidget*) child
@@ -85,9 +85,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_notebook_get_menu_label(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
 }
 
--(NSString*)getMenuLabelText:(CGTKWidget*) child
+-(OFString*)getMenuLabelText:(CGTKWidget*) child
 {
-	return [NSString stringWithUTF8String:gtk_notebook_get_menu_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
+	return [OFString stringWithUTF8String:gtk_notebook_get_menu_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
 }
 
 -(gint)getNpages
@@ -130,9 +130,9 @@
 	return [[CGTKWidget alloc] initWithGObject:(GObject *)gtk_notebook_get_tab_label(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
 }
 
--(NSString*)getTabLabelText:(CGTKWidget*) child
+-(OFString*)getTabLabelText:(CGTKWidget*) child
 {
-	return [NSString stringWithUTF8String:gtk_notebook_get_tab_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
+	return [OFString stringWithUTF8String:gtk_notebook_get_tab_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET])];
 }
 
 -(GtkPositionType)getTabPos
@@ -215,7 +215,7 @@
 	gtk_notebook_set_current_page(GTK_NOTEBOOK([self GOBJECT]), pageNum);
 }
 
--(void)setGroupName:(NSString*) groupName
+-(void)setGroupName:(OFString*) groupName
 {
 	gtk_notebook_set_group_name(GTK_NOTEBOOK([self GOBJECT]), [groupName UTF8String]);
 }
@@ -225,7 +225,7 @@
 	gtk_notebook_set_menu_label(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET], [menuLabel WIDGET]);
 }
 
--(void)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(NSString*) menuText
+-(void)setMenuLabelTextWithChild:(CGTKWidget*) child andMenuText:(OFString*) menuText
 {
 	gtk_notebook_set_menu_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET], [menuText UTF8String]);
 }
@@ -255,7 +255,7 @@
 	gtk_notebook_set_tab_label(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET], [tabLabel WIDGET]);
 }
 
--(void)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(NSString*) tabText
+-(void)setTabLabelTextWithChild:(CGTKWidget*) child andTabText:(OFString*) tabText
 {
 	gtk_notebook_set_tab_label_text(GTK_NOTEBOOK([self GOBJECT]), [child WIDGET], [tabText UTF8String]);
 }

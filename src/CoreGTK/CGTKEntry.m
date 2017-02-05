@@ -122,9 +122,9 @@
 	return gtk_entry_get_icon_gicon(GTK_ENTRY([self GOBJECT]), iconPos);
 }
 
--(NSString*)getIconName:(GtkEntryIconPosition) iconPos
+-(OFString*)getIconName:(GtkEntryIconPosition) iconPos
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_icon_name(GTK_ENTRY([self GOBJECT]), iconPos)];
+	return [OFString stringWithUTF8String:gtk_entry_get_icon_name(GTK_ENTRY([self GOBJECT]), iconPos)];
 }
 
 -(GdkPixbuf*)getIconPixbuf:(GtkEntryIconPosition) iconPos
@@ -137,9 +137,9 @@
 	return (gtk_entry_get_icon_sensitive(GTK_ENTRY([self GOBJECT]), iconPos) ? YES : NO);
 }
 
--(NSString*)getIconStock:(GtkEntryIconPosition) iconPos
+-(OFString*)getIconStock:(GtkEntryIconPosition) iconPos
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_icon_stock(GTK_ENTRY([self GOBJECT]), iconPos)];
+	return [OFString stringWithUTF8String:gtk_entry_get_icon_stock(GTK_ENTRY([self GOBJECT]), iconPos)];
 }
 
 -(GtkImageType)getIconStorageType:(GtkEntryIconPosition) iconPos
@@ -147,14 +147,14 @@
 	return gtk_entry_get_icon_storage_type(GTK_ENTRY([self GOBJECT]), iconPos);
 }
 
--(NSString*)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos
+-(OFString*)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_icon_tooltip_markup(GTK_ENTRY([self GOBJECT]), iconPos)];
+	return [OFString stringWithUTF8String:gtk_entry_get_icon_tooltip_markup(GTK_ENTRY([self GOBJECT]), iconPos)];
 }
 
--(NSString*)getIconTooltipText:(GtkEntryIconPosition) iconPos
+-(OFString*)getIconTooltipText:(GtkEntryIconPosition) iconPos
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_icon_tooltip_text(GTK_ENTRY([self GOBJECT]), iconPos)];
+	return [OFString stringWithUTF8String:gtk_entry_get_icon_tooltip_text(GTK_ENTRY([self GOBJECT]), iconPos)];
 }
 
 -(const GtkBorder*)getInnerBorder
@@ -202,9 +202,9 @@
 	return (gtk_entry_get_overwrite_mode(GTK_ENTRY([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getPlaceholderText
+-(OFString*)getPlaceholderText
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_placeholder_text(GTK_ENTRY([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_entry_get_placeholder_text(GTK_ENTRY([self GOBJECT]))];
 }
 
 -(gdouble)getProgressFraction
@@ -222,9 +222,9 @@
 	return gtk_entry_get_tabs(GTK_ENTRY([self GOBJECT]));
 }
 
--(NSString*)getText
+-(OFString*)getText
 {
-	return [NSString stringWithUTF8String:gtk_entry_get_text(GTK_ENTRY([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_entry_get_text(GTK_ENTRY([self GOBJECT]))];
 }
 
 -(void)getTextArea:(GdkRectangle*) textArea
@@ -322,7 +322,7 @@
 	gtk_entry_set_icon_from_gicon(GTK_ENTRY([self GOBJECT]), iconPos, icon);
 }
 
--(void)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(NSString*) iconName
+-(void)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(OFString*) iconName
 {
 	gtk_entry_set_icon_from_icon_name(GTK_ENTRY([self GOBJECT]), iconPos, [iconName UTF8String]);
 }
@@ -332,7 +332,7 @@
 	gtk_entry_set_icon_from_pixbuf(GTK_ENTRY([self GOBJECT]), iconPos, pixbuf);
 }
 
--(void)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(NSString*) stockId
+-(void)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(OFString*) stockId
 {
 	gtk_entry_set_icon_from_stock(GTK_ENTRY([self GOBJECT]), iconPos, [stockId UTF8String]);
 }
@@ -342,12 +342,12 @@
 	gtk_entry_set_icon_sensitive(GTK_ENTRY([self GOBJECT]), iconPos, (sensitive ? TRUE : FALSE));
 }
 
--(void)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip
+-(void)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip
 {
 	gtk_entry_set_icon_tooltip_markup(GTK_ENTRY([self GOBJECT]), iconPos, [tooltip UTF8String]);
 }
 
--(void)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip
+-(void)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip
 {
 	gtk_entry_set_icon_tooltip_text(GTK_ENTRY([self GOBJECT]), iconPos, [tooltip UTF8String]);
 }
@@ -387,7 +387,7 @@
 	gtk_entry_set_overwrite_mode(GTK_ENTRY([self GOBJECT]), (overwrite ? TRUE : FALSE));
 }
 
--(void)setPlaceholderText:(NSString*) text
+-(void)setPlaceholderText:(OFString*) text
 {
 	gtk_entry_set_placeholder_text(GTK_ENTRY([self GOBJECT]), [text UTF8String]);
 }
@@ -407,7 +407,7 @@
 	gtk_entry_set_tabs(GTK_ENTRY([self GOBJECT]), tabs);
 }
 
--(void)setText:(NSString*) text
+-(void)setText:(OFString*) text
 {
 	gtk_entry_set_text(GTK_ENTRY([self GOBJECT]), [text UTF8String]);
 }

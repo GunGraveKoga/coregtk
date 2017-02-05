@@ -43,7 +43,7 @@
 
 -(GtkContainer*)CONTAINER;
 
--(void)addWidget:(CGTKWidget *)widget withProperties:(NSDictionary *)properties;
+-(void)addWidget:(CGTKWidget *)widget withProperties:(OFDictionary *)properties;
 
 /**
  * -(void*)add:(CGTKWidget*) widget;
@@ -59,30 +59,30 @@
 -(void)checkResize;
 
 /**
- * -(void*)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(GValue*) value;
+ * -(void*)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(GValue*) value;
  *
  * @param child
  * @param propertyName
  * @param value
  */
--(void)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(GValue*) value;
+-(void)childGetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(GValue*) value;
 
 /**
- * -(void*)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+ * -(void*)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
  *
  * @param child
  * @param firstPropertyName
  * @param varArgs
  */
--(void)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+-(void)childGetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
 
 /**
- * -(void*)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(NSString*) childProperty;
+ * -(void*)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(OFString*) childProperty;
  *
  * @param child
  * @param childProperty
  */
--(void)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(NSString*) childProperty;
+-(void)childNotifyWithChild:(CGTKWidget*) child andChildProperty:(OFString*) childProperty;
 
 /**
  * -(void*)childNotifyByPspecWithChild:(CGTKWidget*) child andPspec:(GParamSpec*) pspec;
@@ -93,22 +93,22 @@
 -(void)childNotifyByPspecWithChild:(CGTKWidget*) child andPspec:(GParamSpec*) pspec;
 
 /**
- * -(void*)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(const GValue*) value;
+ * -(void*)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(const GValue*) value;
  *
  * @param child
  * @param propertyName
  * @param value
  */
--(void)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(NSString*) propertyName andValue:(const GValue*) value;
+-(void)childSetPropertyWithChild:(CGTKWidget*) child andPropertyName:(OFString*) propertyName andValue:(const GValue*) value;
 
 /**
- * -(void*)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+ * -(void*)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
  *
  * @param child
  * @param firstPropertyName
  * @param varArgs
  */
--(void)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(NSString*) firstPropertyName andVarArgs:(va_list) varArgs;
+-(void)childSetValistWithChild:(CGTKWidget*) child andFirstPropertyName:(OFString*) firstPropertyName andVarArgs:(va_list) varArgs;
 
 /**
  * -(GType*)childType;

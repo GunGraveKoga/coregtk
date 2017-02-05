@@ -57,7 +57,7 @@
 	return self;
 }
 
--(id)initFromFile:(NSString*) filename
+-(id)initFromFile:(OFString*) filename
 {
 	self = [super initWithGObject:(GObject *)gtk_image_new_from_file([filename UTF8String])];
 
@@ -81,7 +81,7 @@
 	return self;
 }
 
--(id)initFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size
+-(id)initFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size
 {
 	self = [super initWithGObject:(GObject *)gtk_image_new_from_icon_name([iconName UTF8String], size)];
 
@@ -117,7 +117,7 @@
 	return self;
 }
 
--(id)initFromResource:(NSString*) resourcePath
+-(id)initFromResource:(OFString*) resourcePath
 {
 	self = [super initWithGObject:(GObject *)gtk_image_new_from_resource([resourcePath UTF8String])];
 
@@ -129,7 +129,7 @@
 	return self;
 }
 
--(id)initFromStockWithStockId:(NSString*) stockId andSize:(GtkIconSize) size
+-(id)initFromStockWithStockId:(OFString*) stockId andSize:(GtkIconSize) size
 {
 	self = [super initWithGObject:(GObject *)gtk_image_new_from_stock([stockId UTF8String], size)];
 
@@ -208,7 +208,7 @@
 	gtk_image_set_from_animation(GTK_IMAGE([self GOBJECT]), animation);
 }
 
--(void)setFromFile:(NSString*) filename
+-(void)setFromFile:(OFString*) filename
 {
 	gtk_image_set_from_file(GTK_IMAGE([self GOBJECT]), [filename UTF8String]);
 }
@@ -218,7 +218,7 @@
 	gtk_image_set_from_gicon(GTK_IMAGE([self GOBJECT]), icon, size);
 }
 
--(void)setFromIconNameWithIconName:(NSString*) iconName andSize:(GtkIconSize) size
+-(void)setFromIconNameWithIconName:(OFString*) iconName andSize:(GtkIconSize) size
 {
 	gtk_image_set_from_icon_name(GTK_IMAGE([self GOBJECT]), [iconName UTF8String], size);
 }
@@ -233,12 +233,12 @@
 	gtk_image_set_from_pixbuf(GTK_IMAGE([self GOBJECT]), pixbuf);
 }
 
--(void)setFromResource:(NSString*) resourcePath
+-(void)setFromResource:(OFString*) resourcePath
 {
 	gtk_image_set_from_resource(GTK_IMAGE([self GOBJECT]), [resourcePath UTF8String]);
 }
 
--(void)setFromStockWithStockId:(NSString*) stockId andSize:(GtkIconSize) size
+-(void)setFromStockWithStockId:(OFString*) stockId andSize:(GtkIconSize) size
 {
 	gtk_image_set_from_stock(GTK_IMAGE([self GOBJECT]), [stockId UTF8String], size);
 }

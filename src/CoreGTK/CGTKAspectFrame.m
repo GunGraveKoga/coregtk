@@ -33,7 +33,7 @@
 
 @implementation CGTKAspectFrame
 
--(id)initWithLabel:(NSString*) label andXalign:(gfloat) xalign andYalign:(gfloat) yalign andRatio:(gfloat) ratio andObeyChild:(BOOL) obeyChild
+-(id)initWithLabel:(OFString*) label andXalign:(gfloat) xalign andYalign:(gfloat) yalign andRatio:(gfloat) ratio andObeyChild:(BOOL) obeyChild
 {
 	self = [super initWithGObject:(GObject *)gtk_aspect_frame_new([label UTF8String], xalign, yalign, ratio, (obeyChild ? TRUE : FALSE))];
 

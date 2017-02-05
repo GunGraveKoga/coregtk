@@ -33,7 +33,7 @@
 
 @implementation CGTKExpander
 
--(id)init:(NSString*) label
+-(id)init:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_expander_new([label UTF8String])];
 
@@ -45,7 +45,7 @@
 	return self;
 }
 
--(id)initWithMnemonic:(NSString*) label
+-(id)initWithMnemonic:(OFString*) label
 {
 	self = [super initWithGObject:(GObject *)gtk_expander_new_with_mnemonic([label UTF8String])];
 
@@ -67,9 +67,9 @@
 	return (gtk_expander_get_expanded(GTK_EXPANDER([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getLabel
+-(OFString*)getLabel
 {
-	return [NSString stringWithUTF8String:gtk_expander_get_label(GTK_EXPANDER([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_expander_get_label(GTK_EXPANDER([self GOBJECT]))];
 }
 
 -(BOOL)getLabelFill
@@ -107,7 +107,7 @@
 	gtk_expander_set_expanded(GTK_EXPANDER([self GOBJECT]), (expanded ? TRUE : FALSE));
 }
 
--(void)setLabel:(NSString*) label
+-(void)setLabel:(OFString*) label
 {
 	gtk_expander_set_label(GTK_EXPANDER([self GOBJECT]), [label UTF8String]);
 }

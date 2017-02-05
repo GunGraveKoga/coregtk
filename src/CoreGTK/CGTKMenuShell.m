@@ -48,7 +48,7 @@
 	gtk_menu_shell_append(GTK_MENU_SHELL([self GOBJECT]), [child WIDGET]);
 }
 
--(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(NSString*) actionNamespace andWithSeparators:(BOOL) withSeparators
+-(void)bindModelWithModel:(GMenuModel*) model andActionNamespace:(OFString*) actionNamespace andWithSeparators:(BOOL) withSeparators
 {
 	gtk_menu_shell_bind_model(GTK_MENU_SHELL([self GOBJECT]), model, [actionNamespace UTF8String], (withSeparators ? TRUE : FALSE));
 }

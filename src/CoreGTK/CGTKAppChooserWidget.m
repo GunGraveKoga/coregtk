@@ -33,7 +33,7 @@
 
 @implementation CGTKAppChooserWidget
 
--(id)init:(NSString*) contentType
+-(id)init:(OFString*) contentType
 {
 	self = [super initWithGObject:(GObject *)gtk_app_chooser_widget_new([contentType UTF8String])];
 
@@ -50,9 +50,9 @@
 	return GTK_APP_CHOOSER_WIDGET([self GOBJECT]);
 }
 
--(NSString*)getDefaultText
+-(OFString*)getDefaultText
 {
-	return [NSString stringWithUTF8String:gtk_app_chooser_widget_get_default_text(GTK_APP_CHOOSER_WIDGET([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_app_chooser_widget_get_default_text(GTK_APP_CHOOSER_WIDGET([self GOBJECT]))];
 }
 
 -(BOOL)getShowAll
@@ -80,7 +80,7 @@
 	return (gtk_app_chooser_widget_get_show_recommended(GTK_APP_CHOOSER_WIDGET([self GOBJECT])) ? YES : NO);
 }
 
--(void)setDefaultText:(NSString*) text
+-(void)setDefaultText:(OFString*) text
 {
 	gtk_app_chooser_widget_set_default_text(GTK_APP_CHOOSER_WIDGET([self GOBJECT]), [text UTF8String]);
 }

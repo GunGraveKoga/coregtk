@@ -35,7 +35,7 @@
 
 #import "MultiDialog.h"
 
-@interface SimpleTextEditor : NSObject
+@interface SimpleTextEditor : OFObject
 {
 	CGTKTextView *txtView;
 	CGTKWidget *window;
@@ -50,7 +50,7 @@
 -(void)btnSave_Clicked;
 
 // Helper methods to deal with the text view
--(NSString *)getText;
--(void)setText:(NSString *)text;
+-(OFString *)getText;
+-(void)setText:(OFString *)text;
 
 @end

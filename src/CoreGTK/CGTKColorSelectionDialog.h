@@ -40,7 +40,7 @@
 /**
  * Constructors
  */
--(id)init:(NSString*) title;
+-(id)init:(OFString*) title;
 
 /**
  * Methods

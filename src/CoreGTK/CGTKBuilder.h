@@ -41,9 +41,9 @@
  * Constructors
  */
 -(id)init;
--(id)initFromFile:(NSString*) filename;
--(id)initFromResource:(NSString*) resourcePath;
--(id)initFromStringWithString:(NSString*) string andLength:(gssize) length;
+-(id)initFromFile:(OFString*) filename;
+-(id)initFromResource:(OFString*) resourcePath;
+-(id)initFromStringWithString:(OFString*) string andLength:(gssize) length;
 
 /**
  * Methods
@@ -52,63 +52,63 @@
 -(GtkBuilder*)BUILDER;
 
 /**
- * -(void*)addCallbackSymbolWithCallbackName:(NSString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol;
+ * -(void*)addCallbackSymbolWithCallbackName:(OFString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol;
  *
  * @param callbackName
  * @param callbackSymbol
  */
--(void)addCallbackSymbolWithCallbackName:(NSString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol;
+-(void)addCallbackSymbolWithCallbackName:(OFString*) callbackName andCallbackSymbol:(GCallback) callbackSymbol;
 
 /**
- * -(guint*)addFromFileWithFilename:(NSString*) filename andErr:(GError**) err;
+ * -(guint*)addFromFileWithFilename:(OFString*) filename andErr:(GError**) err;
  *
  * @param filename
  * @param err
  * @returns guint
  */
--(guint)addFromFileWithFilename:(NSString*) filename andErr:(GError**) err;
+-(guint)addFromFileWithFilename:(OFString*) filename andErr:(GError**) err;
 
 /**
- * -(guint*)addFromResourceWithResourcePath:(NSString*) resourcePath andErr:(GError**) err;
+ * -(guint*)addFromResourceWithResourcePath:(OFString*) resourcePath andErr:(GError**) err;
  *
  * @param resourcePath
  * @param err
  * @returns guint
  */
--(guint)addFromResourceWithResourcePath:(NSString*) resourcePath andErr:(GError**) err;
+-(guint)addFromResourceWithResourcePath:(OFString*) resourcePath andErr:(GError**) err;
 
 /**
- * -(guint*)addFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andErr:(GError**) err;
+ * -(guint*)addFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andErr:(GError**) err;
  *
  * @param buffer
  * @param length
  * @param err
  * @returns guint
  */
--(guint)addFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andErr:(GError**) err;
+-(guint)addFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andErr:(GError**) err;
 
 /**
- * -(guint*)addObjectsFromFileWithFilename:(NSString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+ * -(guint*)addObjectsFromFileWithFilename:(OFString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err;
  *
  * @param filename
  * @param objectIds
  * @param err
  * @returns guint
  */
--(guint)addObjectsFromFileWithFilename:(NSString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+-(guint)addObjectsFromFileWithFilename:(OFString*) filename andObjectIds:(gchar**) objectIds andErr:(GError**) err;
 
 /**
- * -(guint*)addObjectsFromResourceWithResourcePath:(NSString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+ * -(guint*)addObjectsFromResourceWithResourcePath:(OFString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err;
  *
  * @param resourcePath
  * @param objectIds
  * @param err
  * @returns guint
  */
--(guint)addObjectsFromResourceWithResourcePath:(NSString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+-(guint)addObjectsFromResourceWithResourcePath:(OFString*) resourcePath andObjectIds:(gchar**) objectIds andErr:(GError**) err;
 
 /**
- * -(guint*)addObjectsFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+ * -(guint*)addObjectsFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err;
  *
  * @param buffer
  * @param length
@@ -116,7 +116,7 @@
  * @param err
  * @returns guint
  */
--(guint)addObjectsFromStringWithBuffer:(NSString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err;
+-(guint)addObjectsFromStringWithBuffer:(OFString*) buffer andLength:(gsize) length andObjectIds:(gchar**) objectIds andErr:(GError**) err;
 
 /**
  * -(void*)connectSignals:(gpointer) userData;
@@ -134,12 +134,12 @@
 -(void)connectSignalsFullWithFunc:(GtkBuilderConnectFunc) func andUserData:(gpointer) userData;
 
 /**
- * -(void*)exposeObjectWithName:(NSString*) name andObject:(GObject*) object;
+ * -(void*)exposeObjectWithName:(OFString*) name andObject:(GObject*) object;
  *
  * @param name
  * @param object
  */
--(void)exposeObjectWithName:(NSString*) name andObject:(GObject*) object;
+-(void)exposeObjectWithName:(OFString*) name andObject:(GObject*) object;
 
 /**
  * -(GtkApplication**)getApplication;
@@ -149,12 +149,12 @@
 -(GtkApplication*)getApplication;
 
 /**
- * -(GObject**)getObject:(NSString*) name;
+ * -(GObject**)getObject:(OFString*) name;
  *
  * @param name
  * @returns GObject*
  */
--(GObject*)getObject:(NSString*) name;
+-(GObject*)getObject:(OFString*) name;
 
 /**
  * -(GSList**)getObjects;
@@ -164,11 +164,11 @@
 -(GSList*)getObjects;
 
 /**
- * -(NSString**)getTranslationDomain;
+ * -(OFString**)getTranslationDomain;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getTranslationDomain;
+-(OFString*)getTranslationDomain;
 
 /**
  * -(GType*)getTypeFromName:(const char*) typeName;
@@ -179,12 +179,12 @@
 -(GType)getTypeFromName:(const char*) typeName;
 
 /**
- * -(GCallback*)lookupCallbackSymbol:(NSString*) callbackName;
+ * -(GCallback*)lookupCallbackSymbol:(OFString*) callbackName;
  *
  * @param callbackName
  * @returns GCallback
  */
--(GCallback)lookupCallbackSymbol:(NSString*) callbackName;
+-(GCallback)lookupCallbackSymbol:(OFString*) callbackName;
 
 /**
  * -(void*)setApplication:(GtkApplication*) application;
@@ -194,14 +194,14 @@
 -(void)setApplication:(GtkApplication*) application;
 
 /**
- * -(void*)setTranslationDomain:(NSString*) domain;
+ * -(void*)setTranslationDomain:(OFString*) domain;
  *
  * @param domain
  */
--(void)setTranslationDomain:(NSString*) domain;
+-(void)setTranslationDomain:(OFString*) domain;
 
 /**
- * -(BOOL*)valueFromStringWithPspec:(GParamSpec*) pspec andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err;
+ * -(BOOL*)valueFromStringWithPspec:(GParamSpec*) pspec andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err;
  *
  * @param pspec
  * @param string
@@ -209,10 +209,10 @@
  * @param err
  * @returns BOOL
  */
--(BOOL)valueFromStringWithPspec:(GParamSpec*) pspec andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err;
+-(BOOL)valueFromStringWithPspec:(GParamSpec*) pspec andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err;
 
 /**
- * -(BOOL*)valueFromStringTypeWithType:(GType) type andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err;
+ * -(BOOL*)valueFromStringTypeWithType:(GType) type andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err;
  *
  * @param type
  * @param string
@@ -220,6 +220,6 @@
  * @param err
  * @returns BOOL
  */
--(BOOL)valueFromStringTypeWithType:(GType) type andString:(NSString*) string andValue:(GValue*) value andErr:(GError**) err;
+-(BOOL)valueFromStringTypeWithType:(GType) type andString:(OFString*) string andValue:(GValue*) value andErr:(GError**) err;
 
 @end

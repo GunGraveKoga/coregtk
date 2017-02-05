@@ -139,12 +139,12 @@
 -(GIcon*)getIconGicon:(GtkEntryIconPosition) iconPos;
 
 /**
- * -(NSString**)getIconName:(GtkEntryIconPosition) iconPos;
+ * -(OFString**)getIconName:(GtkEntryIconPosition) iconPos;
  *
  * @param iconPos
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconName:(GtkEntryIconPosition) iconPos;
+-(OFString*)getIconName:(GtkEntryIconPosition) iconPos;
 
 /**
  * -(GdkPixbuf**)getIconPixbuf:(GtkEntryIconPosition) iconPos;
@@ -163,12 +163,12 @@
 -(BOOL)getIconSensitive:(GtkEntryIconPosition) iconPos;
 
 /**
- * -(NSString**)getIconStock:(GtkEntryIconPosition) iconPos;
+ * -(OFString**)getIconStock:(GtkEntryIconPosition) iconPos;
  *
  * @param iconPos
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconStock:(GtkEntryIconPosition) iconPos;
+-(OFString*)getIconStock:(GtkEntryIconPosition) iconPos;
 
 /**
  * -(GtkImageType*)getIconStorageType:(GtkEntryIconPosition) iconPos;
@@ -179,20 +179,20 @@
 -(GtkImageType)getIconStorageType:(GtkEntryIconPosition) iconPos;
 
 /**
- * -(NSString**)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos;
+ * -(OFString**)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos;
  *
  * @param iconPos
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos;
+-(OFString*)getIconTooltipMarkup:(GtkEntryIconPosition) iconPos;
 
 /**
- * -(NSString**)getIconTooltipText:(GtkEntryIconPosition) iconPos;
+ * -(OFString**)getIconTooltipText:(GtkEntryIconPosition) iconPos;
  *
  * @param iconPos
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getIconTooltipText:(GtkEntryIconPosition) iconPos;
+-(OFString*)getIconTooltipText:(GtkEntryIconPosition) iconPos;
 
 /**
  * -(const GtkBorder**)getInnerBorder;
@@ -259,11 +259,11 @@
 -(BOOL)getOverwriteMode;
 
 /**
- * -(NSString**)getPlaceholderText;
+ * -(OFString**)getPlaceholderText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getPlaceholderText;
+-(OFString*)getPlaceholderText;
 
 /**
  * -(gdouble*)getProgressFraction;
@@ -287,11 +287,11 @@
 -(PangoTabArray*)getTabs;
 
 /**
- * -(NSString**)getText;
+ * -(OFString**)getText;
  *
- * @returns NSString*
+ * @returns OFString*
  */
--(NSString*)getText;
+-(OFString*)getText;
 
 /**
  * -(void*)getTextArea:(GdkRectangle*) textArea;
@@ -430,12 +430,12 @@
 -(void)setIconFromGiconWithIconPos:(GtkEntryIconPosition) iconPos andIcon:(GIcon*) icon;
 
 /**
- * -(void*)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(NSString*) iconName;
+ * -(void*)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(OFString*) iconName;
  *
  * @param iconPos
  * @param iconName
  */
--(void)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(NSString*) iconName;
+-(void)setIconFromIconNameWithIconPos:(GtkEntryIconPosition) iconPos andIconName:(OFString*) iconName;
 
 /**
  * -(void*)setIconFromPixbufWithIconPos:(GtkEntryIconPosition) iconPos andPixbuf:(GdkPixbuf*) pixbuf;
@@ -446,12 +446,12 @@
 -(void)setIconFromPixbufWithIconPos:(GtkEntryIconPosition) iconPos andPixbuf:(GdkPixbuf*) pixbuf;
 
 /**
- * -(void*)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(NSString*) stockId;
+ * -(void*)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(OFString*) stockId;
  *
  * @param iconPos
  * @param stockId
  */
--(void)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(NSString*) stockId;
+-(void)setIconFromStockWithIconPos:(GtkEntryIconPosition) iconPos andStockId:(OFString*) stockId;
 
 /**
  * -(void*)setIconSensitiveWithIconPos:(GtkEntryIconPosition) iconPos andSensitive:(BOOL) sensitive;
@@ -462,20 +462,20 @@
 -(void)setIconSensitiveWithIconPos:(GtkEntryIconPosition) iconPos andSensitive:(BOOL) sensitive;
 
 /**
- * -(void*)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip;
+ * -(void*)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip;
  *
  * @param iconPos
  * @param tooltip
  */
--(void)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip;
+-(void)setIconTooltipMarkupWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip;
 
 /**
- * -(void*)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip;
+ * -(void*)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip;
  *
  * @param iconPos
  * @param tooltip
  */
--(void)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(NSString*) tooltip;
+-(void)setIconTooltipTextWithIconPos:(GtkEntryIconPosition) iconPos andTooltip:(OFString*) tooltip;
 
 /**
  * -(void*)setInnerBorder:(const GtkBorder*) border;
@@ -527,11 +527,11 @@
 -(void)setOverwriteMode:(BOOL) overwrite;
 
 /**
- * -(void*)setPlaceholderText:(NSString*) text;
+ * -(void*)setPlaceholderText:(OFString*) text;
  *
  * @param text
  */
--(void)setPlaceholderText:(NSString*) text;
+-(void)setPlaceholderText:(OFString*) text;
 
 /**
  * -(void*)setProgressFraction:(gdouble) fraction;
@@ -555,11 +555,11 @@
 -(void)setTabs:(PangoTabArray*) tabs;
 
 /**
- * -(void*)setText:(NSString*) text;
+ * -(void*)setText:(OFString*) text;
  *
  * @param text
  */
--(void)setText:(NSString*) text;
+-(void)setText:(OFString*) text;
 
 /**
  * -(void*)setVisibility:(BOOL) visible;

@@ -100,9 +100,9 @@
 	return gtk_assistant_get_page_side_image(GTK_ASSISTANT([self GOBJECT]), [page WIDGET]);
 }
 
--(NSString*)getPageTitle:(CGTKWidget*) page
+-(OFString*)getPageTitle:(CGTKWidget*) page
 {
-	return [NSString stringWithUTF8String:gtk_assistant_get_page_title(GTK_ASSISTANT([self GOBJECT]), [page WIDGET])];
+	return [OFString stringWithUTF8String:gtk_assistant_get_page_title(GTK_ASSISTANT([self GOBJECT]), [page WIDGET])];
 }
 
 -(GtkAssistantPageType)getPageType:(CGTKWidget*) page
@@ -170,7 +170,7 @@
 	gtk_assistant_set_page_side_image(GTK_ASSISTANT([self GOBJECT]), [page WIDGET], pixbuf);
 }
 
--(void)setPageTitleWithPage:(CGTKWidget*) page andTitle:(NSString*) title
+-(void)setPageTitleWithPage:(CGTKWidget*) page andTitle:(OFString*) title
 {
 	gtk_assistant_set_page_title(GTK_ASSISTANT([self GOBJECT]), [page WIDGET], [title UTF8String]);
 }

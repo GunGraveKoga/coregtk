@@ -75,9 +75,9 @@
 	return (gtk_progress_bar_get_show_text(GTK_PROGRESS_BAR([self GOBJECT])) ? YES : NO);
 }
 
--(NSString*)getText
+-(OFString*)getText
 {
-	return [NSString stringWithUTF8String:gtk_progress_bar_get_text(GTK_PROGRESS_BAR([self GOBJECT]))];
+	return [OFString stringWithUTF8String:gtk_progress_bar_get_text(GTK_PROGRESS_BAR([self GOBJECT]))];
 }
 
 -(void)pulse
@@ -110,7 +110,7 @@
 	gtk_progress_bar_set_show_text(GTK_PROGRESS_BAR([self GOBJECT]), (showText ? TRUE : FALSE));
 }
 
--(void)setText:(NSString*) text
+-(void)setText:(OFString*) text
 {
 	gtk_progress_bar_set_text(GTK_PROGRESS_BAR([self GOBJECT]), [text UTF8String]);
 }
